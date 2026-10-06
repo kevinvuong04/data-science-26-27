@@ -1,0 +1,26 @@
+[project]
+name = "data-science-26-27"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Kevin Vuong", email = "vuongkevin04@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.4.6",
+    "pandas>=3.0.6",
+]
+
+[project.scripts]
+data-science-26-27 = "data_science_26_27:main"
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+]
