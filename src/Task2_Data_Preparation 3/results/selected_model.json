@@ -1,0 +1,15 @@
+{
+  "model": "Median + Neg-P5 + Winsor-P95 + Power",
+  "config": {
+    "imputation": "median",
+    "outliers": "winsor95",
+    "negative": "p05",
+    "power": true,
+    "cyclic": false,
+    "scaling": false
+  },
+  "validation_mae": 0.8413732933589759,
+  "validation_r2": 0.728177633854833,
+  "rule": "Minimum Validation-MAE; Toleranz 1e-8, dann weniger optionale Schritte; kein Testzugriff",
+  "refit_on_train_plus_validation": false
+}

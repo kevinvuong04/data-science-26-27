@@ -1,0 +1,4 @@
+Teil,Zeilen,Labels vorhanden,Start,Ende
+Training vor Labelprüfung,2890,2686,2024-06-03 11:00:00,2024-10-01 20:00:00
+Training für Fit,2686,2686,2024-06-03 11:00:00,2024-10-01 20:00:00
+Validation unverändert,723,723,2024-10-01 21:00:00,2024-10-31 23:00:00

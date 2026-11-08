@@ -1,0 +1,14 @@
+{
+  "model": "Mittelwert + IQR + Power + Windzyklus",
+  "config": {
+    "imputation": "mean",
+    "outliers": true,
+    "power": true,
+    "cyclic": true,
+    "scaling": false
+  },
+  "validation_mae": 1.0987552606058417,
+  "validation_r2": 0.3126468518443838,
+  "rule": "Minimum Validation-MAE; Toleranz 1e-8, dann weniger optionale Schritte; kein Testzugriff",
+  "refit_on_train_plus_validation": false
+}

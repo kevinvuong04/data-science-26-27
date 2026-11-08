@@ -1,0 +1,6 @@
+Vergleich,MAE_Gewinn
+Median allein,0.030504148637804374
+IQR allein,0.32640091441234587
+Median + IQR,0.28578740566992766
+Summe isolierter Gewinne,0.35690506305015024
+Zusätzlicher Kombinationseffekt,-0.07111765738022258

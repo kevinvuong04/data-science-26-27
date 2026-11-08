@@ -1,0 +1,16 @@
+feature,value
+pm25_lowcost,2.75
+no,1.6
+no2,7.0
+o3,24.6
+co2,455.7
+black_carbon,0.624
+ufp,8805.2
+temperature,17.006
+relative_humidity,77.536
+pressure,1008.8
+wind_speed,0.911
+wind_direction,199.329
+rain_vol,96.257
+glob_rad,25.627
+timestamp_days,74.33333333333333

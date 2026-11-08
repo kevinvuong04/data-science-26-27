@@ -1,0 +1,2 @@
+Modell,MAE,R2,Zeilen,Labels
+Median + Neg-Imputation + Winsor-P95 + Power,2.238648556990768,0.011271174382902371,1464,1419
