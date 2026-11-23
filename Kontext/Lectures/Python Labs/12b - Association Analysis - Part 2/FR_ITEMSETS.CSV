@@ -1,0 +1,726 @@
+,support,itemsets,length
+0,0.020397280362618318,{'Almonds'},1
+1,0.008932142381015865,{'Antioxydant Juice'},1
+2,0.03332888948140248,{'Avocado'},1
+3,0.008665511265164644,{'Bacon'},1
+4,0.010798560191974404,{'Barbecue Sauce'},1
+5,0.014264764698040262,{'Black Tea'},1
+6,0.009198773496867084,{'Blueberries'},1
+7,0.011465137981602452,{'Body Spray'},1
+8,0.03372883615517931,{'Brownies'},1
+9,0.008665511265164644,{'Bug Spray'},1
+10,0.005865884548726837,{'Burger Sauce'},1
+11,0.0871883748833489,{'Burgers'},1
+12,0.030129316091187842,{'Butter'},1
+13,0.08105585921877083,{'Cake'},1
+14,0.009732035728569524,{'Candy Bars'},1
+15,0.01533128916144514,{'Carrots'},1
+16,0.025729902679642713,{'Cereals'},1
+17,0.04679376083188908,{'Champagne'},1
+18,0.05999200106652446,{'Chicken'},1
+19,0.0061325156645780565,{'Chili'},1
+20,0.1638448206905746,{'Chocolate'},1
+21,0.010531929076123183,{'Cider'},1
+22,0.008398880149313425,{'Clothes Accessories'},1
+23,0.08038928142914278,{'Cookies'},1
+24,0.0510598586855086,{'Cooking Oil'},1
+25,0.03186241834422077,{'Cottage Cheese'},1
+26,0.013198240234635382,{'Eggplant'},1
+27,0.17970937208372217,{'Eggs'},1
+28,0.027063058258898813,{'Energy Bar'},1
+29,0.026663111585121985,{'Energy Drink'},1
+30,0.0793227569657379,{'Escalope'},1
+31,0.011998400213304892,{'Extra Dark Chocolate'},1
+32,0.009065457938941474,{'Flax Seed'},1
+33,0.1709105452606319,{'French Fries'},1
+34,0.022530329289428077,{'French Wine'},1
+35,0.043060925209972005,{'Fresh Bread'},1
+36,0.022263698173576856,{'Fresh Tuna'},1
+37,0.013598186908412212,{'Fromage Blanc'},1
+38,0.06332489001466471,{'Frozen Smoothie'},1
+39,0.09532062391681109,{'Frozen Vegetables'},1
+40,0.006932409012131715,{'Gluten Free Bar'},1
+41,0.0523930142647647,{'Grated Cheese'},1
+42,0.008665511265164644,{'Green Beans'},1
+43,0.009065457938941474,{'Green Grapes'},1
+44,0.13211571790427942,{'Green Tea'},1
+45,0.09825356619117451,{'Ground Beef'},1
+46,0.013464871350486601,{'Gums'},1
+47,0.026529796027196375,{'Ham'},1
+48,0.005199306759098787,{'Hand Protein Bar'},1
+49,0.04946007199040128,{'Herb & Pepper'},1
+50,0.047460338621517134,{'Honey'},1
+51,0.03239568057592321,{'Hot Dogs'},1
+52,0.01559792027729636,{'Light Cream'},1
+53,0.027196373816824423,{'Light Mayo'},1
+54,0.07652313024930009,{'Low Fat Yogurt'},1
+55,0.010931875749900012,{'Magazines'},1
+56,0.0061325156645780565,{'Mayonnaise'},1
+57,0.020930542594320756,{'Meatballs'},1
+58,0.011998400213304892,{'Melons'},1
+59,0.12958272230369283,{'Milk'},1
+60,0.23836821757099053,{'Mineral Water'},1
+61,0.0174643380882549,{'Mint'},1
+62,0.005599253432875617,{'Mint Green Tea'},1
+63,0.024130115984535395,{'Muffins'},1
+64,0.019064124783362217,{'Mushroom Cream Sauce'},1
+65,0.010398613518197574,{'Nonfat Milk'},1
+66,0.023063591521130515,{'Oil'},1
+67,0.0658578856152513,{'Olive Oil'},1
+68,0.09505399280095987,{'Pancakes'},1
+69,0.01986401813091588,{'Parmesan Cheese'},1
+70,0.01573123583522197,{'Pasta'},1
+71,0.026529796027196375,{'Pepper'},1
+72,0.006532462338354886,{'Pet Food'},1
+73,0.005999200106652446,{'Pickles'},1
+74,0.01853086255165978,{'Protein Bar'},1
+75,0.028129582722303693,{'Red Wine'},1
+76,0.018797493667511,{'Rice'},1
+77,0.04252766297826956,{'Salmon'},1
+78,0.009198773496867084,{'Salt'},1
+79,0.007732302359685375,{'Shallot'},1
+80,0.07145713904812692,{'Shrimp'},1
+81,0.006265831222503666,{'Soda'},1
+82,0.05052659645380616,{'Soup'},1
+83,0.17411011865084655,{'Spaghetti'},1
+84,0.006265831222503666,{'Sparkling Water'},1
+85,0.007065724570057326,{'Spinach'},1
+86,0.021330489268097587,{'Strawberries'},1
+87,0.007732302359685375,{'Strong Cheese'},1
+88,0.030395947207039063,{'Tomato Juice'},1
+89,0.014131449140114652,{'Tomato Sauce'},1
+90,0.06839088121583789,{'Tomatoes'},1
+91,0.008132249033462205,{'Toothpaste'},1
+92,0.06252499666711105,{'Turkey'},1
+93,0.025729902679642713,{'Vegetables Mix'},1
+94,0.01653112918277563,{'White Wine'},1
+95,0.009332089054792695,{'Whole Weat Flour'},1
+96,0.029462738301559793,{'Whole Wheat Pasta'},1
+97,0.058525529929342755,{'Whole Wheat Rice'},1
+98,0.011465137981602452,{'Yams'},1
+99,0.027329689374750034,{'Yogurt Cake'},1
+100,0.009465404612718305,{'Zucchini'},1
+101,0.005199306759098787,"{'Burgers', 'Almonds'}",2
+102,0.005999200106652446,"{'Chocolate', 'Almonds'}",2
+103,0.006532462338354886,"{'Eggs', 'Almonds'}",2
+104,0.005065991201173177,"{'Green Tea', 'Almonds'}",2
+105,0.005199306759098787,"{'Milk', 'Almonds'}",2
+106,0.007598986801759766,"{'Mineral Water', 'Almonds'}",2
+107,0.005999200106652446,"{'Spaghetti', 'Almonds'}",2
+108,0.007065724570057326,"{'Chocolate', 'Avocado'}",2
+109,0.005599253432875617,"{'Eggs', 'Avocado'}",2
+110,0.007998933475536596,"{'French Fries', 'Avocado'}",2
+111,0.005065991201173177,"{'Frozen Smoothie', 'Avocado'}",2
+112,0.006265831222503666,"{'Green Tea', 'Avocado'}",2
+113,0.007465671243834155,"{'Avocado', 'Milk'}",2
+114,0.011598453539528063,"{'Mineral Water', 'Avocado'}",2
+115,0.007998933475536596,"{'Spaghetti', 'Avocado'}",2
+116,0.005332622317024397,"{'Black Tea', 'Mineral Water'}",2
+117,0.005465937874950006,"{'Cake', 'Brownies'}",2
+118,0.007332355685908546,"{'Eggs', 'Brownies'}",2
+119,0.007865617917610986,"{'French Fries', 'Brownies'}",2
+120,0.006665777896280496,"{'Green Tea', 'Brownies'}",2
+121,0.005465937874950006,"{'Brownies', 'Milk'}",2
+122,0.009598720170643914,"{'Mineral Water', 'Brownies'}",2
+123,0.005465937874950006,"{'Brownies', 'Pancakes'}",2
+124,0.007332355685908546,"{'Spaghetti', 'Brownies'}",2
+125,0.011465137981602452,"{'Burgers', 'Cake'}",2
+126,0.006265831222503666,"{'Burgers', 'Chicken'}",2
+127,0.017064391414478068,"{'Chocolate', 'Burgers'}",2
+128,0.005599253432875617,"{'Burgers', 'Cookies'}",2
+129,0.005732568990801226,"{'Cooking Oil', 'Burgers'}",2
+130,0.02879616051193174,"{'Burgers', 'Eggs'}",2
+131,0.007065724570057326,"{'Escalope', 'Burgers'}",2
+132,0.021997067057725635,"{'French Fries', 'Burgers'}",2
+133,0.007199040127982935,"{'Burgers', 'Frozen Smoothie'}",2
+134,0.010531929076123183,"{'Frozen Vegetables', 'Burgers'}",2
+135,0.005465937874950006,"{'Grated Cheese', 'Burgers'}",2
+136,0.0174643380882549,"{'Burgers', 'Green Tea'}",2
+137,0.011998400213304892,"{'Burgers', 'Ground Beef'}",2
+138,0.005599253432875617,"{'Burgers', 'Ham'}",2
+139,0.006265831222503666,"{'Honey', 'Burgers'}",2
+140,0.006665777896280496,"{'Burgers', 'Low Fat Yogurt'}",2
+141,0.01786428476203173,"{'Burgers', 'Milk'}",2
+142,0.024396747100386616,"{'Burgers', 'Mineral Water'}",2
+143,0.006399146780429276,"{'Burgers', 'Olive Oil'}",2
+144,0.010531929076123183,"{'Burgers', 'Pancakes'}",2
+145,0.008798826823090255,"{'Burgers', 'Shrimp'}",2
+146,0.006265831222503666,"{'Soup', 'Burgers'}",2
+147,0.021463804826023197,"{'Burgers', 'Spaghetti'}",2
+148,0.008265564591387815,"{'Tomatoes', 'Burgers'}",2
+149,0.010665244634048793,"{'Burgers', 'Turkey'}",2
+150,0.008932142381015865,"{'Burgers', 'Whole Wheat Rice'}",2
+151,0.008265564591387815,"{'Chocolate', 'Butter'}",2
+152,0.0061325156645780565,"{'Butter', 'Eggs'}",2
+153,0.0061325156645780565,"{'French Fries', 'Butter'}",2
+154,0.007332355685908546,"{'Butter', 'Green Tea'}",2
+155,0.0061325156645780565,"{'Butter', 'Milk'}",2
+156,0.006265831222503666,"{'Butter', 'Spaghetti'}",2
+157,0.006532462338354886,"{'Cake', 'Chicken'}",2
+158,0.013598186908412212,"{'Chocolate', 'Cake'}",2
+159,0.019064124783362217,"{'Cake', 'Eggs'}",2
+160,0.01786428476203173,"{'French Fries', 'Cake'}",2
+161,0.006399146780429276,"{'Cake', 'Frozen Smoothie'}",2
+162,0.010265297960271964,"{'Frozen Vegetables', 'Cake'}",2
+163,0.014131449140114652,"{'Cake', 'Green Tea'}",2
+164,0.008132249033462205,"{'Cake', 'Ground Beef'}",2
+165,0.006932409012131715,"{'Cake', 'Low Fat Yogurt'}",2
+166,0.013331555792560993,"{'Cake', 'Milk'}",2
+167,0.027463004932675644,"{'Cake', 'Mineral Water'}",2
+168,0.006532462338354886,"{'Cake', 'Olive Oil'}",2
+169,0.011865084655379284,"{'Cake', 'Pancakes'}",2
+170,0.007598986801759766,"{'Cake', 'Shrimp'}",2
+171,0.0061325156645780565,"{'Soup', 'Cake'}",2
+172,0.018130915877882948,"{'Cake', 'Spaghetti'}",2
+173,0.008398880149313425,"{'Tomatoes', 'Cake'}",2
+174,0.006932409012131715,"{'Cake', 'Turkey'}",2
+175,0.007732302359685375,"{'Whole Wheat Rice', 'Cake'}",2
+176,0.005332622317024397,"{'Mineral Water', 'Carrots'}",2
+177,0.005599253432875617,"{'Cereals', 'Chocolate'}",2
+178,0.006532462338354886,"{'Cereals', 'Green Tea'}",2
+179,0.007065724570057326,"{'Cereals', 'Milk'}",2
+180,0.010265297960271964,"{'Cereals', 'Mineral Water'}",2
+181,0.006665777896280496,"{'Cereals', 'Spaghetti'}",2
+182,0.011598453539528063,"{'Chocolate', 'Champagne'}",2
+183,0.006665777896280496,"{'Champagne', 'Eggs'}",2
+184,0.009332089054792695,"{'French Fries', 'Champagne'}",2
+185,0.008265564591387815,"{'Champagne', 'Green Tea'}",2
+186,0.005332622317024397,"{'Champagne', 'Milk'}",2
+187,0.007465671243834155,"{'Champagne', 'Mineral Water'}",2
+188,0.005065991201173177,"{'Champagne', 'Pancakes'}",2
+189,0.006665777896280496,"{'Champagne', 'Spaghetti'}",2
+190,0.014664711371817091,"{'Chocolate', 'Chicken'}",2
+191,0.006799093454206106,"{'Cooking Oil', 'Chicken'}",2
+192,0.01439808025596587,"{'Chicken', 'Eggs'}",2
+193,0.011065191307825623,"{'French Fries', 'Chicken'}",2
+194,0.005199306759098787,"{'Fresh Bread', 'Chicken'}",2
+195,0.006665777896280496,"{'Chicken', 'Frozen Smoothie'}",2
+196,0.008932142381015865,"{'Frozen Vegetables', 'Chicken'}",2
+197,0.011865084655379284,"{'Chicken', 'Green Tea'}",2
+198,0.009465404612718305,"{'Ground Beef', 'Chicken'}",2
+199,0.014798026929742702,"{'Chicken', 'Milk'}",2
+200,0.022796960405279298,"{'Chicken', 'Mineral Water'}",2
+201,0.007199040127982935,"{'Chicken', 'Olive Oil'}",2
+202,0.009065457938941474,"{'Chicken', 'Pancakes'}",2
+203,0.006265831222503666,"{'Chicken', 'Shrimp'}",2
+204,0.005999200106652446,"{'Soup', 'Chicken'}",2
+205,0.01719770697240368,"{'Chicken', 'Spaghetti'}",2
+206,0.006399146780429276,"{'Tomatoes', 'Chicken'}",2
+207,0.005465937874950006,"{'Whole Wheat Rice', 'Chicken'}",2
+208,0.010398613518197574,"{'Chocolate', 'Cookies'}",2
+209,0.013598186908412212,"{'Cooking Oil', 'Chocolate'}",2
+210,0.03319557392347687,"{'Chocolate', 'Eggs'}",2
+211,0.01759765364618051,"{'Escalope', 'Chocolate'}",2
+212,0.03439541394480736,"{'Chocolate', 'French Fries'}",2
+213,0.005199306759098787,"{'French Wine', 'Chocolate'}",2
+214,0.009465404612718305,"{'Chocolate', 'Fresh Bread'}",2
+215,0.01493134248766831,"{'Chocolate', 'Frozen Smoothie'}",2
+216,0.022930275963204905,"{'Frozen Vegetables', 'Chocolate'}",2
+217,0.010931875749900012,"{'Chocolate', 'Grated Cheese'}",2
+218,0.023463538194907346,"{'Chocolate', 'Green Tea'}",2
+219,0.023063591521130515,"{'Chocolate', 'Ground Beef'}",2
+220,0.006265831222503666,"{'Chocolate', 'Ham'}",2
+221,0.009065457938941474,"{'Herb & Pepper', 'Chocolate'}",2
+222,0.007998933475536596,"{'Honey', 'Chocolate'}",2
+223,0.005465937874950006,"{'Hot Dogs', 'Chocolate'}",2
+224,0.005065991201173177,"{'Chocolate', 'Light Mayo'}",2
+225,0.014798026929742702,"{'Chocolate', 'Low Fat Yogurt'}",2
+226,0.03212904946007199,"{'Chocolate', 'Milk'}",2
+227,0.05265964538061592,"{'Chocolate', 'Mineral Water'}",2
+228,0.0061325156645780565,"{'Oil', 'Chocolate'}",2
+229,0.01639781362485002,"{'Chocolate', 'Olive Oil'}",2
+230,0.01986401813091588,"{'Chocolate', 'Pancakes'}",2
+231,0.006399146780429276,"{'Chocolate', 'Pepper'}",2
+232,0.005332622317024397,"{'Chocolate', 'Rice'}",2
+233,0.010665244634048793,"{'Chocolate', 'Salmon'}",2
+234,0.017997600319957337,"{'Chocolate', 'Shrimp'}",2
+235,0.010131982402346354,"{'Soup', 'Chocolate'}",2
+236,0.03919477403012932,"{'Chocolate', 'Spaghetti'}",2
+237,0.005865884548726837,"{'Chocolate', 'Tomato Juice'}",2
+238,0.005065991201173177,"{'Chocolate', 'Tomato Sauce'}",2
+239,0.013998133582189041,"{'Chocolate', 'Tomatoes'}",2
+240,0.011331822423676844,"{'Chocolate', 'Turkey'}",2
+241,0.006265831222503666,"{'Whole Wheat Pasta', 'Chocolate'}",2
+242,0.011998400213304892,"{'Chocolate', 'Whole Wheat Rice'}",2
+243,0.010531929076123183,"{'Cookies', 'Eggs'}",2
+244,0.013331555792560993,"{'French Fries', 'Cookies'}",2
+245,0.011998400213304892,"{'Cookies', 'Green Tea'}",2
+246,0.005332622317024397,"{'Cookies', 'Low Fat Yogurt'}",2
+247,0.007465671243834155,"{'Mineral Water', 'Cookies'}",2
+248,0.005199306759098787,"{'Cookies', 'Pancakes'}",2
+249,0.007998933475536596,"{'Spaghetti', 'Cookies'}",2
+250,0.011731769097453673,"{'Cooking Oil', 'Eggs'}",2
+251,0.005332622317024397,"{'Cooking Oil', 'Escalope'}",2
+252,0.007865617917610986,"{'Cooking Oil', 'French Fries'}",2
+253,0.006799093454206106,"{'Frozen Vegetables', 'Cooking Oil'}",2
+254,0.005732568990801226,"{'Cooking Oil', 'Grated Cheese'}",2
+255,0.007065724570057326,"{'Cooking Oil', 'Green Tea'}",2
+256,0.008398880149313425,"{'Cooking Oil', 'Ground Beef'}",2
+257,0.005332622317024397,"{'Cooking Oil', 'Herb & Pepper'}",2
+258,0.006532462338354886,"{'Cooking Oil', 'Low Fat Yogurt'}",2
+259,0.011465137981602452,"{'Cooking Oil', 'Milk'}",2
+260,0.020130649246767097,"{'Cooking Oil', 'Mineral Water'}",2
+261,0.005065991201173177,"{'Cooking Oil', 'Olive Oil'}",2
+262,0.007865617917610986,"{'Cooking Oil', 'Pancakes'}",2
+263,0.005999200106652446,"{'Cooking Oil', 'Shrimp'}",2
+264,0.005332622317024397,"{'Soup', 'Cooking Oil'}",2
+265,0.01586455139314758,"{'Cooking Oil', 'Spaghetti'}",2
+266,0.006665777896280496,"{'Cooking Oil', 'Tomatoes'}",2
+267,0.005732568990801226,"{'Cooking Oil', 'Turkey'}",2
+268,0.005465937874950006,"{'Cooking Oil', 'Whole Wheat Rice'}",2
+269,0.005599253432875617,"{'Eggs', 'Cottage Cheese'}",2
+270,0.005865884548726837,"{'French Fries', 'Cottage Cheese'}",2
+271,0.006399146780429276,"{'Green Tea', 'Cottage Cheese'}",2
+272,0.009598720170643914,"{'Mineral Water', 'Cottage Cheese'}",2
+273,0.005199306759098787,"{'Cottage Cheese', 'Pancakes'}",2
+274,0.006932409012131715,"{'Spaghetti', 'Cottage Cheese'}",2
+275,0.005199306759098787,"{'Energy Bar', 'Eggs'}",2
+276,0.011065191307825623,"{'Escalope', 'Eggs'}",2
+277,0.036395147313691506,"{'French Fries', 'Eggs'}",2
+278,0.005999200106652446,"{'French Wine', 'Eggs'}",2
+279,0.008665511265164644,"{'Fresh Bread', 'Eggs'}",2
+280,0.005865884548726837,"{'Eggs', 'Fresh Tuna'}",2
+281,0.011065191307825623,"{'Frozen Smoothie', 'Eggs'}",2
+282,0.021730435941874418,"{'Frozen Vegetables', 'Eggs'}",2
+283,0.009065457938941474,"{'Grated Cheese', 'Eggs'}",2
+284,0.025463271563791495,"{'Eggs', 'Green Tea'}",2
+285,0.019997333688841486,"{'Ground Beef', 'Eggs'}",2
+286,0.006265831222503666,"{'Eggs', 'Ham'}",2
+287,0.012531662445007332,"{'Herb & Pepper', 'Eggs'}",2
+288,0.005732568990801226,"{'Honey', 'Eggs'}",2
+289,0.005465937874950006,"{'Light Mayo', 'Eggs'}",2
+290,0.01679776029862685,"{'Eggs', 'Low Fat Yogurt'}",2
+291,0.03079589388081589,"{'Eggs', 'Milk'}",2
+292,0.05092654312758299,"{'Mineral Water', 'Eggs'}",2
+293,0.011998400213304892,"{'Eggs', 'Olive Oil'}",2
+294,0.021730435941874418,"{'Eggs', 'Pancakes'}",2
+295,0.007065724570057326,"{'Red Wine', 'Eggs'}",2
+296,0.008265564591387815,"{'Salmon', 'Eggs'}",2
+297,0.014131449140114652,"{'Eggs', 'Shrimp'}",2
+298,0.009065457938941474,"{'Soup', 'Eggs'}",2
+299,0.036528462871617116,"{'Spaghetti', 'Eggs'}",2
+300,0.005065991201173177,"{'Tomato Juice', 'Eggs'}",2
+301,0.012265031329156113,"{'Tomatoes', 'Eggs'}",2
+302,0.01946407145713905,"{'Turkey', 'Eggs'}",2
+303,0.010931875749900012,"{'Whole Wheat Rice', 'Eggs'}",2
+304,0.005465937874950006,"{'Energy Bar', 'Milk'}",2
+305,0.006799093454206106,"{'Energy Bar', 'Mineral Water'}",2
+306,0.0061325156645780565,"{'French Fries', 'Energy Drink'}",2
+307,0.005599253432875617,"{'Energy Drink', 'Mineral Water'}",2
+308,0.01639781362485002,"{'Escalope', 'French Fries'}",2
+309,0.005465937874950006,"{'Escalope', 'Frozen Smoothie'}",2
+310,0.007598986801759766,"{'Frozen Vegetables', 'Escalope'}",2
+311,0.008932142381015865,"{'Escalope', 'Green Tea'}",2
+312,0.008265564591387815,"{'Escalope', 'Ground Beef'}",2
+313,0.007732302359685375,"{'Escalope', 'Milk'}",2
+314,0.017064391414478068,"{'Escalope', 'Mineral Water'}",2
+315,0.005732568990801226,"{'Escalope', 'Mushroom Cream Sauce'}",2
+316,0.005865884548726837,"{'Escalope', 'Pancakes'}",2
+317,0.005865884548726837,"{'Escalope', 'Pasta'}",2
+318,0.013998133582189041,"{'Escalope', 'Spaghetti'}",2
+319,0.005465937874950006,"{'Escalope', 'Tomatoes'}",2
+320,0.005199306759098787,"{'Escalope', 'Whole Wheat Rice'}",2
+321,0.005732568990801226,"{'Extra Dark Chocolate', 'Mineral Water'}",2
+322,0.008265564591387815,"{'French Fries', 'Fresh Bread'}",2
+323,0.014531395813891481,"{'French Fries', 'Frozen Smoothie'}",2
+324,0.019064124783362217,"{'Frozen Vegetables', 'French Fries'}",2
+325,0.010398613518197574,"{'Grated Cheese', 'French Fries'}",2
+326,0.028529529396080524,"{'French Fries', 'Green Tea'}",2
+327,0.01386481802426343,"{'French Fries', 'Ground Beef'}",2
+328,0.005599253432875617,"{'French Fries', 'Ham'}",2
+329,0.006932409012131715,"{'Herb & Pepper', 'French Fries'}",2
+330,0.008932142381015865,"{'Honey', 'French Fries'}",2
+331,0.007332355685908546,"{'Hot Dogs', 'French Fries'}",2
+332,0.007332355685908546,"{'French Fries', 'Light Mayo'}",2
+333,0.013331555792560993,"{'French Fries', 'Low Fat Yogurt'}",2
+334,0.023730169310758567,"{'French Fries', 'Milk'}",2
+335,0.03372883615517931,"{'French Fries', 'Mineral Water'}",2
+336,0.005332622317024397,"{'French Fries', 'Muffins'}",2
+337,0.009198773496867084,"{'French Fries', 'Olive Oil'}",2
+338,0.020130649246767097,"{'French Fries', 'Pancakes'}",2
+339,0.005332622317024397,"{'Red Wine', 'French Fries'}",2
+340,0.005865884548726837,"{'French Fries', 'Salmon'}",2
+341,0.009998666844420743,"{'French Fries', 'Shrimp'}",2
+342,0.007598986801759766,"{'Soup', 'French Fries'}",2
+343,0.027596320490601255,"{'French Fries', 'Spaghetti'}",2
+344,0.005732568990801226,"{'Strawberries', 'French Fries'}",2
+345,0.007065724570057326,"{'French Fries', 'Tomato Juice'}",2
+346,0.011998400213304892,"{'French Fries', 'Tomatoes'}",2
+347,0.010665244634048793,"{'French Fries', 'Turkey'}",2
+348,0.005599253432875617,"{'Vegetables Mix', 'French Fries'}",2
+349,0.005465937874950006,"{'Whole Wheat Pasta', 'French Fries'}",2
+350,0.010531929076123183,"{'French Fries', 'Whole Wheat Rice'}",2
+351,0.005065991201173177,"{'French Fries', 'Yogurt Cake'}",2
+352,0.008265564591387815,"{'French Wine', 'Mineral Water'}",2
+353,0.007732302359685375,"{'French Wine', 'Spaghetti'}",2
+354,0.006799093454206106,"{'Frozen Vegetables', 'Fresh Bread'}",2
+355,0.006399146780429276,"{'Fresh Bread', 'Green Tea'}",2
+356,0.0061325156645780565,"{'Fresh Bread', 'Ground Beef'}",2
+357,0.009198773496867084,"{'Fresh Bread', 'Milk'}",2
+358,0.013331555792560993,"{'Fresh Bread', 'Mineral Water'}",2
+359,0.005065991201173177,"{'Fresh Bread', 'Olive Oil'}",2
+360,0.005332622317024397,"{'Fresh Bread', 'Pancakes'}",2
+361,0.005199306759098787,"{'Fresh Bread', 'Shrimp'}",2
+362,0.009065457938941474,"{'Fresh Bread', 'Spaghetti'}",2
+363,0.008798826823090255,"{'Mineral Water', 'Fresh Tuna'}",2
+364,0.005065991201173177,"{'Pancakes', 'Fresh Tuna'}",2
+365,0.006799093454206106,"{'Spaghetti', 'Fresh Tuna'}",2
+366,0.009998666844420743,"{'Frozen Vegetables', 'Frozen Smoothie'}",2
+367,0.011198506865751233,"{'Frozen Smoothie', 'Green Tea'}",2
+368,0.007598986801759766,"{'Ground Beef', 'Frozen Smoothie'}",2
+369,0.005865884548726837,"{'Honey', 'Frozen Smoothie'}",2
+370,0.007332355685908546,"{'Frozen Smoothie', 'Low Fat Yogurt'}",2
+371,0.014264764698040262,"{'Frozen Smoothie', 'Milk'}",2
+372,0.020263964804692707,"{'Mineral Water', 'Frozen Smoothie'}",2
+373,0.006932409012131715,"{'Frozen Smoothie', 'Olive Oil'}",2
+374,0.009065457938941474,"{'Frozen Smoothie', 'Pancakes'}",2
+375,0.005065991201173177,"{'Frozen Smoothie', 'Salmon'}",2
+376,0.007332355685908546,"{'Frozen Smoothie', 'Shrimp'}",2
+377,0.01559792027729636,"{'Spaghetti', 'Frozen Smoothie'}",2
+378,0.006532462338354886,"{'Tomatoes', 'Frozen Smoothie'}",2
+379,0.005999200106652446,"{'Whole Wheat Rice', 'Frozen Smoothie'}",2
+380,0.006799093454206106,"{'Frozen Vegetables', 'Grated Cheese'}",2
+381,0.01439808025596587,"{'Frozen Vegetables', 'Green Tea'}",2
+382,0.01693107585655246,"{'Frozen Vegetables', 'Ground Beef'}",2
+383,0.005999200106652446,"{'Frozen Vegetables', 'Herb & Pepper'}",2
+384,0.007598986801759766,"{'Frozen Vegetables', 'Honey'}",2
+385,0.010131982402346354,"{'Frozen Vegetables', 'Low Fat Yogurt'}",2
+386,0.023596853752832957,"{'Frozen Vegetables', 'Milk'}",2
+387,0.03572856952406346,"{'Frozen Vegetables', 'Mineral Water'}",2
+388,0.011331822423676844,"{'Frozen Vegetables', 'Olive Oil'}",2
+389,0.013464871350486601,"{'Frozen Vegetables', 'Pancakes'}",2
+390,0.005465937874950006,"{'Frozen Vegetables', 'Parmesan Cheese'}",2
+391,0.006265831222503666,"{'Frozen Vegetables', 'Salmon'}",2
+392,0.01666444474070124,"{'Frozen Vegetables', 'Shrimp'}",2
+393,0.007998933475536596,"{'Frozen Vegetables', 'Soup'}",2
+394,0.027862951606452472,"{'Frozen Vegetables', 'Spaghetti'}",2
+395,0.0161311825089988,"{'Frozen Vegetables', 'Tomatoes'}",2
+396,0.008798826823090255,"{'Frozen Vegetables', 'Turkey'}",2
+397,0.009065457938941474,"{'Frozen Vegetables', 'Whole Wheat Rice'}",2
+398,0.007865617917610986,"{'Grated Cheese', 'Green Tea'}",2
+399,0.011331822423676844,"{'Grated Cheese', 'Ground Beef'}",2
+400,0.006532462338354886,"{'Herb & Pepper', 'Grated Cheese'}",2
+401,0.005599253432875617,"{'Grated Cheese', 'Low Fat Yogurt'}",2
+402,0.007865617917610986,"{'Grated Cheese', 'Milk'}",2
+403,0.0174643380882549,"{'Grated Cheese', 'Mineral Water'}",2
+404,0.006265831222503666,"{'Grated Cheese', 'Olive Oil'}",2
+405,0.006932409012131715,"{'Grated Cheese', 'Pancakes'}",2
+406,0.005199306759098787,"{'Grated Cheese', 'Salmon'}",2
+407,0.01653112918277563,"{'Grated Cheese', 'Spaghetti'}",2
+408,0.014798026929742702,"{'Ground Beef', 'Green Tea'}",2
+409,0.006399146780429276,"{'Herb & Pepper', 'Green Tea'}",2
+410,0.009332089054792695,"{'Honey', 'Green Tea'}",2
+411,0.006665777896280496,"{'Hot Dogs', 'Green Tea'}",2
+412,0.007598986801759766,"{'Green Tea', 'Low Fat Yogurt'}",2
+413,0.01759765364618051,"{'Green Tea', 'Milk'}",2
+414,0.03106252499666711,"{'Mineral Water', 'Green Tea'}",2
+415,0.009998666844420743,"{'Olive Oil', 'Green Tea'}",2
+416,0.01639781362485002,"{'Green Tea', 'Pancakes'}",2
+417,0.005199306759098787,"{'Green Tea', 'Pepper'}",2
+418,0.005865884548726837,"{'Salmon', 'Green Tea'}",2
+419,0.011465137981602452,"{'Green Tea', 'Shrimp'}",2
+420,0.007065724570057326,"{'Soup', 'Green Tea'}",2
+421,0.026529796027196375,"{'Spaghetti', 'Green Tea'}",2
+422,0.006265831222503666,"{'Tomato Juice', 'Green Tea'}",2
+423,0.012265031329156113,"{'Tomatoes', 'Green Tea'}",2
+424,0.011865084655379284,"{'Turkey', 'Green Tea'}",2
+425,0.005065991201173177,"{'Vegetables Mix', 'Green Tea'}",2
+426,0.005199306759098787,"{'Whole Wheat Pasta', 'Green Tea'}",2
+427,0.009065457938941474,"{'Whole Wheat Rice', 'Green Tea'}",2
+428,0.015997866951073192,"{'Herb & Pepper', 'Ground Beef'}",2
+429,0.006799093454206106,"{'Honey', 'Ground Beef'}",2
+430,0.009598720170643914,"{'Ground Beef', 'Low Fat Yogurt'}",2
+431,0.021997067057725635,"{'Ground Beef', 'Milk'}",2
+432,0.040927876283162246,"{'Ground Beef', 'Mineral Water'}",2
+433,0.014131449140114652,"{'Ground Beef', 'Olive Oil'}",2
+434,0.014531395813891481,"{'Ground Beef', 'Pancakes'}",2
+435,0.006532462338354886,"{'Ground Beef', 'Pepper'}",2
+436,0.008932142381015865,"{'Ground Beef', 'Salmon'}",2
+437,0.011465137981602452,"{'Ground Beef', 'Shrimp'}",2
+438,0.009732035728569524,"{'Soup', 'Ground Beef'}",2
+439,0.03919477403012932,"{'Ground Beef', 'Spaghetti'}",2
+440,0.005332622317024397,"{'Ground Beef', 'Tomato Sauce'}",2
+441,0.011731769097453673,"{'Tomatoes', 'Ground Beef'}",2
+442,0.009198773496867084,"{'Turkey', 'Ground Beef'}",2
+443,0.008132249033462205,"{'Whole Wheat Rice', 'Ground Beef'}",2
+444,0.009198773496867084,"{'Mineral Water', 'Ham'}",2
+445,0.009198773496867084,"{'Spaghetti', 'Ham'}",2
+446,0.005865884548726837,"{'Herb & Pepper', 'Low Fat Yogurt'}",2
+447,0.009198773496867084,"{'Herb & Pepper', 'Milk'}",2
+448,0.017064391414478068,"{'Herb & Pepper', 'Mineral Water'}",2
+449,0.005065991201173177,"{'Herb & Pepper', 'Olive Oil'}",2
+450,0.007332355685908546,"{'Herb & Pepper', 'Pancakes'}",2
+451,0.007065724570057326,"{'Herb & Pepper', 'Shrimp'}",2
+452,0.01626449806692441,"{'Herb & Pepper', 'Spaghetti'}",2
+453,0.007732302359685375,"{'Honey', 'Milk'}",2
+454,0.015064658045593921,"{'Honey', 'Mineral Water'}",2
+455,0.006665777896280496,"{'Honey', 'Pancakes'}",2
+456,0.011865084655379284,"{'Honey', 'Spaghetti'}",2
+457,0.005332622317024397,"{'Honey', 'Tomatoes'}",2
+458,0.005732568990801226,"{'Honey', 'Turkey'}",2
+459,0.009198773496867084,"{'Hot Dogs', 'Mineral Water'}",2
+460,0.008665511265164644,"{'Hot Dogs', 'Spaghetti'}",2
+461,0.007332355685908546,"{'Light Cream', 'Mineral Water'}",2
+462,0.005332622317024397,"{'Light Cream', 'Spaghetti'}",2
+463,0.006265831222503666,"{'Light Mayo', 'Mineral Water'}",2
+464,0.005465937874950006,"{'Light Mayo', 'Pancakes'}",2
+465,0.013198240234635382,"{'Low Fat Yogurt', 'Milk'}",2
+466,0.023996800426609784,"{'Mineral Water', 'Low Fat Yogurt'}",2
+467,0.006799093454206106,"{'Olive Oil', 'Low Fat Yogurt'}",2
+468,0.009465404612718305,"{'Low Fat Yogurt', 'Pancakes'}",2
+469,0.006265831222503666,"{'Shrimp', 'Low Fat Yogurt'}",2
+470,0.005732568990801226,"{'Soup', 'Low Fat Yogurt'}",2
+471,0.015197973603519531,"{'Spaghetti', 'Low Fat Yogurt'}",2
+472,0.005999200106652446,"{'Tomatoes', 'Low Fat Yogurt'}",2
+473,0.005065991201173177,"{'Turkey', 'Low Fat Yogurt'}",2
+474,0.006532462338354886,"{'Whole Wheat Rice', 'Low Fat Yogurt'}",2
+475,0.005465937874950006,"{'Meatballs', 'Milk'}",2
+476,0.007732302359685375,"{'Meatballs', 'Mineral Water'}",2
+477,0.006399146780429276,"{'Meatballs', 'Spaghetti'}",2
+478,0.04799360085321957,"{'Mineral Water', 'Milk'}",2
+479,0.017064391414478068,"{'Olive Oil', 'Milk'}",2
+480,0.01653112918277563,"{'Pancakes', 'Milk'}",2
+481,0.005065991201173177,"{'Pepper', 'Milk'}",2
+482,0.009732035728569524,"{'Salmon', 'Milk'}",2
+483,0.01759765364618051,"{'Shrimp', 'Milk'}",2
+484,0.015197973603519531,"{'Soup', 'Milk'}",2
+485,0.03546193840821224,"{'Spaghetti', 'Milk'}",2
+486,0.005732568990801226,"{'Tomato Juice', 'Milk'}",2
+487,0.013998133582189041,"{'Tomatoes', 'Milk'}",2
+488,0.011331822423676844,"{'Turkey', 'Milk'}",2
+489,0.009865351286495135,"{'Whole Wheat Pasta', 'Milk'}",2
+490,0.011865084655379284,"{'Whole Wheat Rice', 'Milk'}",2
+491,0.005865884548726837,"{'Mineral Water', 'Mint'}",2
+492,0.005065991201173177,"{'Nonfat Milk', 'Mineral Water'}",2
+493,0.007332355685908546,"{'Oil', 'Mineral Water'}",2
+494,0.027596320490601255,"{'Mineral Water', 'Olive Oil'}",2
+495,0.03372883615517931,"{'Mineral Water', 'Pancakes'}",2
+496,0.008265564591387815,"{'Mineral Water', 'Pepper'}",2
+497,0.007732302359685375,"{'Protein Bar', 'Mineral Water'}",2
+498,0.010931875749900012,"{'Red Wine', 'Mineral Water'}",2
+499,0.007732302359685375,"{'Rice', 'Mineral Water'}",2
+500,0.017064391414478068,"{'Mineral Water', 'Salmon'}",2
+501,0.023596853752832957,"{'Mineral Water', 'Shrimp'}",2
+502,0.023063591521130515,"{'Soup', 'Mineral Water'}",2
+503,0.05972536995067324,"{'Spaghetti', 'Mineral Water'}",2
+504,0.005065991201173177,"{'Strawberries', 'Mineral Water'}",2
+505,0.009598720170643914,"{'Tomato Juice', 'Mineral Water'}",2
+506,0.005732568990801226,"{'Mineral Water', 'Tomato Sauce'}",2
+507,0.024396747100386616,"{'Tomatoes', 'Mineral Water'}",2
+508,0.019197440341287828,"{'Turkey', 'Mineral Water'}",2
+509,0.007865617917610986,"{'Vegetables Mix', 'Mineral Water'}",2
+510,0.009598720170643914,"{'Whole Wheat Pasta', 'Mineral Water'}",2
+511,0.020130649246767097,"{'Whole Wheat Rice', 'Mineral Water'}",2
+512,0.005599253432875617,"{'Yogurt Cake', 'Mineral Water'}",2
+513,0.005732568990801226,"{'Oil', 'Spaghetti'}",2
+514,0.010798560191974404,"{'Olive Oil', 'Pancakes'}",2
+515,0.005732568990801226,"{'Salmon', 'Olive Oil'}",2
+516,0.008132249033462205,"{'Olive Oil', 'Shrimp'}",2
+517,0.008932142381015865,"{'Soup', 'Olive Oil'}",2
+518,0.022930275963204905,"{'Spaghetti', 'Olive Oil'}",2
+519,0.007199040127982935,"{'Tomatoes', 'Olive Oil'}",2
+520,0.005332622317024397,"{'Turkey', 'Olive Oil'}",2
+521,0.007998933475536596,"{'Whole Wheat Pasta', 'Olive Oil'}",2
+522,0.010531929076123183,"{'Shrimp', 'Pancakes'}",2
+523,0.006799093454206106,"{'Soup', 'Pancakes'}",2
+524,0.025196640447940274,"{'Spaghetti', 'Pancakes'}",2
+525,0.009865351286495135,"{'Tomatoes', 'Pancakes'}",2
+526,0.009598720170643914,"{'Turkey', 'Pancakes'}",2
+527,0.006932409012131715,"{'Whole Wheat Rice', 'Pancakes'}",2
+528,0.006799093454206106,"{'Parmesan Cheese', 'Spaghetti'}",2
+529,0.005065991201173177,"{'Shrimp', 'Pasta'}",2
+530,0.009865351286495135,"{'Spaghetti', 'Pepper'}",2
+531,0.005065991201173177,"{'Protein Bar', 'Spaghetti'}",2
+532,0.010265297960271964,"{'Red Wine', 'Spaghetti'}",2
+533,0.005065991201173177,"{'Rice', 'Spaghetti'}",2
+534,0.013464871350486601,"{'Spaghetti', 'Salmon'}",2
+535,0.005599253432875617,"{'Soup', 'Shrimp'}",2
+536,0.021197173710171976,"{'Spaghetti', 'Shrimp'}",2
+537,0.011198506865751233,"{'Tomatoes', 'Shrimp'}",2
+538,0.006399146780429276,"{'Turkey', 'Shrimp'}",2
+539,0.005865884548726837,"{'Whole Wheat Rice', 'Shrimp'}",2
+540,0.014264764698040262,"{'Soup', 'Spaghetti'}",2
+541,0.006932409012131715,"{'Soup', 'Tomatoes'}",2
+542,0.007465671243834155,"{'Tomato Juice', 'Spaghetti'}",2
+543,0.006265831222503666,"{'Spaghetti', 'Tomato Sauce'}",2
+544,0.020930542594320756,"{'Tomatoes', 'Spaghetti'}",2
+545,0.01653112918277563,"{'Turkey', 'Spaghetti'}",2
+546,0.005599253432875617,"{'Vegetables Mix', 'Spaghetti'}",2
+547,0.008798826823090255,"{'Whole Wheat Pasta', 'Spaghetti'}",2
+548,0.014131449140114652,"{'Whole Wheat Rice', 'Spaghetti'}",2
+549,0.006532462338354886,"{'Tomatoes', 'Turkey'}",2
+550,0.005999200106652446,"{'Tomatoes', 'Whole Wheat Rice'}",2
+551,0.007065724570057326,"{'Whole Wheat Rice', 'Turkey'}",2
+552,0.005465937874950006,"{'Chocolate', 'Eggs', 'Burgers'}",3
+553,0.005465937874950006,"{'Chocolate', 'Burgers', 'Milk'}",3
+554,0.005732568990801226,"{'Chocolate', 'Mineral Water', 'Burgers'}",3
+555,0.006399146780429276,"{'Chocolate', 'Spaghetti', 'Burgers'}",3
+556,0.009065457938941474,"{'French Fries', 'Eggs', 'Burgers'}",3
+557,0.005999200106652446,"{'Burgers', 'Eggs', 'Green Tea'}",3
+558,0.005332622317024397,"{'Burgers', 'Eggs', 'Milk'}",3
+559,0.007865617917610986,"{'Burgers', 'Mineral Water', 'Eggs'}",3
+560,0.007199040127982935,"{'Burgers', 'Spaghetti', 'Eggs'}",3
+561,0.005465937874950006,"{'Burgers', 'French Fries', 'Green Tea'}",3
+562,0.005599253432875617,"{'French Fries', 'Burgers', 'Milk'}",3
+563,0.005199306759098787,"{'French Fries', 'Mineral Water', 'Burgers'}",3
+564,0.005599253432875617,"{'French Fries', 'Spaghetti', 'Burgers'}",3
+565,0.005332622317024397,"{'Burgers', 'Ground Beef', 'Mineral Water'}",3
+566,0.005465937874950006,"{'Burgers', 'Ground Beef', 'Spaghetti'}",3
+567,0.006932409012131715,"{'Burgers', 'Mineral Water', 'Milk'}",3
+568,0.006399146780429276,"{'Burgers', 'Spaghetti', 'Milk'}",3
+569,0.006532462338354886,"{'Burgers', 'Spaghetti', 'Mineral Water'}",3
+570,0.005599253432875617,"{'Chocolate', 'Cake', 'Mineral Water'}",3
+571,0.005199306759098787,"{'Chocolate', 'Cake', 'Spaghetti'}",3
+572,0.007199040127982935,"{'Cake', 'Mineral Water', 'Eggs'}",3
+573,0.006399146780429276,"{'French Fries', 'Cake', 'Mineral Water'}",3
+574,0.006399146780429276,"{'Cake', 'Mineral Water', 'Milk'}",3
+575,0.007065724570057326,"{'Spaghetti', 'Cake', 'Mineral Water'}",3
+576,0.007598986801759766,"{'Chocolate', 'Chicken', 'Mineral Water'}",3
+577,0.005199306759098787,"{'Chicken', 'Mineral Water', 'Eggs'}",3
+578,0.006665777896280496,"{'Chicken', 'Mineral Water', 'Milk'}",3
+579,0.005465937874950006,"{'Chicken', 'Spaghetti', 'Milk'}",3
+580,0.006932409012131715,"{'Chicken', 'Spaghetti', 'Mineral Water'}",3
+581,0.005732568990801226,"{'Cooking Oil', 'Chocolate', 'Mineral Water'}",3
+582,0.008398880149313425,"{'Chocolate', 'Eggs', 'French Fries'}",3
+583,0.005732568990801226,"{'Frozen Vegetables', 'Chocolate', 'Eggs'}",3
+584,0.005465937874950006,"{'Chocolate', 'Eggs', 'Green Tea'}",3
+585,0.006532462338354886,"{'Chocolate', 'Ground Beef', 'Eggs'}",3
+586,0.009198773496867084,"{'Chocolate', 'Eggs', 'Milk'}",3
+587,0.013464871350486601,"{'Chocolate', 'Mineral Water', 'Eggs'}",3
+588,0.005599253432875617,"{'Chocolate', 'Eggs', 'Pancakes'}",3
+589,0.010531929076123183,"{'Chocolate', 'Spaghetti', 'Eggs'}",3
+590,0.005199306759098787,"{'Escalope', 'Chocolate', 'French Fries'}",3
+591,0.005599253432875617,"{'Escalope', 'Mineral Water', 'Chocolate'}",3
+592,0.005599253432875617,"{'Frozen Vegetables', 'Chocolate', 'French Fries'}",3
+593,0.005199306759098787,"{'Chocolate', 'Green Tea', 'French Fries'}",3
+594,0.007332355685908546,"{'Chocolate', 'Milk', 'French Fries'}",3
+595,0.008532195707239034,"{'Chocolate', 'Mineral Water', 'French Fries'}",3
+596,0.005465937874950006,"{'Chocolate', 'Pancakes', 'French Fries'}",3
+597,0.007998933475536596,"{'Chocolate', 'Spaghetti', 'French Fries'}",3
+598,0.005065991201173177,"{'Chocolate', 'Mineral Water', 'Frozen Smoothie'}",3
+599,0.005732568990801226,"{'Frozen Vegetables', 'Chocolate', 'Ground Beef'}",3
+600,0.007998933475536596,"{'Frozen Vegetables', 'Chocolate', 'Milk'}",3
+601,0.009732035728569524,"{'Frozen Vegetables', 'Chocolate', 'Mineral Water'}",3
+602,0.005332622317024397,"{'Frozen Vegetables', 'Chocolate', 'Shrimp'}",3
+603,0.007865617917610986,"{'Frozen Vegetables', 'Chocolate', 'Spaghetti'}",3
+604,0.006932409012131715,"{'Chocolate', 'Mineral Water', 'Green Tea'}",3
+605,0.007065724570057326,"{'Chocolate', 'Spaghetti', 'Green Tea'}",3
+606,0.0061325156645780565,"{'Chocolate', 'Ground Beef', 'Milk'}",3
+607,0.010931875749900012,"{'Chocolate', 'Ground Beef', 'Mineral Water'}",3
+608,0.009198773496867084,"{'Chocolate', 'Ground Beef', 'Spaghetti'}",3
+609,0.005732568990801226,"{'Chocolate', 'Mineral Water', 'Low Fat Yogurt'}",3
+610,0.013998133582189041,"{'Chocolate', 'Mineral Water', 'Milk'}",3
+611,0.005199306759098787,"{'Chocolate', 'Olive Oil', 'Milk'}",3
+612,0.005465937874950006,"{'Chocolate', 'Shrimp', 'Milk'}",3
+613,0.010931875749900012,"{'Chocolate', 'Spaghetti', 'Milk'}",3
+614,0.008265564591387815,"{'Chocolate', 'Mineral Water', 'Olive Oil'}",3
+615,0.009332089054792695,"{'Chocolate', 'Mineral Water', 'Pancakes'}",3
+616,0.007598986801759766,"{'Chocolate', 'Mineral Water', 'Shrimp'}",3
+617,0.005599253432875617,"{'Soup', 'Chocolate', 'Mineral Water'}",3
+618,0.01586455139314758,"{'Chocolate', 'Spaghetti', 'Mineral Water'}",3
+619,0.005732568990801226,"{'Chocolate', 'Mineral Water', 'Tomatoes'}",3
+620,0.007065724570057326,"{'Chocolate', 'Spaghetti', 'Olive Oil'}",3
+621,0.006799093454206106,"{'Chocolate', 'Spaghetti', 'Pancakes'}",3
+622,0.006399146780429276,"{'Chocolate', 'Spaghetti', 'Shrimp'}",3
+623,0.006399146780429276,"{'Cooking Oil', 'Mineral Water', 'Eggs'}",3
+624,0.007598986801759766,"{'Cooking Oil', 'Spaghetti', 'Mineral Water'}",3
+625,0.005199306759098787,"{'Frozen Vegetables', 'French Fries', 'Eggs'}",3
+626,0.007065724570057326,"{'French Fries', 'Eggs', 'Green Tea'}",3
+627,0.007199040127982935,"{'French Fries', 'Eggs', 'Milk'}",3
+628,0.006932409012131715,"{'French Fries', 'Mineral Water', 'Eggs'}",3
+629,0.007998933475536596,"{'French Fries', 'Spaghetti', 'Eggs'}",3
+630,0.007332355685908546,"{'Frozen Vegetables', 'Eggs', 'Milk'}",3
+631,0.009065457938941474,"{'Frozen Vegetables', 'Mineral Water', 'Eggs'}",3
+632,0.005732568990801226,"{'Frozen Vegetables', 'Spaghetti', 'Eggs'}",3
+633,0.006932409012131715,"{'Mineral Water', 'Eggs', 'Green Tea'}",3
+634,0.005732568990801226,"{'Spaghetti', 'Eggs', 'Green Tea'}",3
+635,0.005865884548726837,"{'Ground Beef', 'Eggs', 'Milk'}",3
+636,0.010131982402346354,"{'Ground Beef', 'Mineral Water', 'Eggs'}",3
+637,0.008932142381015865,"{'Ground Beef', 'Spaghetti', 'Eggs'}",3
+638,0.005332622317024397,"{'Herb & Pepper', 'Mineral Water', 'Eggs'}",3
+639,0.0061325156645780565,"{'Mineral Water', 'Eggs', 'Low Fat Yogurt'}",3
+640,0.013064924676709772,"{'Mineral Water', 'Eggs', 'Milk'}",3
+641,0.008932142381015865,"{'Spaghetti', 'Eggs', 'Milk'}",3
+642,0.005865884548726837,"{'Eggs', 'Mineral Water', 'Olive Oil'}",3
+643,0.007865617917610986,"{'Mineral Water', 'Eggs', 'Pancakes'}",3
+644,0.005199306759098787,"{'Mineral Water', 'Eggs', 'Shrimp'}",3
+645,0.014264764698040262,"{'Spaghetti', 'Mineral Water', 'Eggs'}",3
+646,0.005065991201173177,"{'Tomatoes', 'Mineral Water', 'Eggs'}",3
+647,0.005599253432875617,"{'Turkey', 'Mineral Water', 'Eggs'}",3
+648,0.005065991201173177,"{'Eggs', 'Spaghetti', 'Olive Oil'}",3
+649,0.006665777896280496,"{'Spaghetti', 'Eggs', 'Pancakes'}",3
+650,0.005199306759098787,"{'Turkey', 'Spaghetti', 'Eggs'}",3
+651,0.005732568990801226,"{'Frozen Vegetables', 'French Fries', 'Milk'}",3
+652,0.0061325156645780565,"{'Frozen Vegetables', 'French Fries', 'Mineral Water'}",3
+653,0.005332622317024397,"{'Frozen Vegetables', 'French Fries', 'Spaghetti'}",3
+654,0.0061325156645780565,"{'French Fries', 'Mineral Water', 'Green Tea'}",3
+655,0.005332622317024397,"{'French Fries', 'Spaghetti', 'Green Tea'}",3
+656,0.005332622317024397,"{'French Fries', 'Ground Beef', 'Mineral Water'}",3
+657,0.005599253432875617,"{'French Fries', 'Ground Beef', 'Spaghetti'}",3
+658,0.008265564591387815,"{'French Fries', 'Mineral Water', 'Milk'}",3
+659,0.006399146780429276,"{'French Fries', 'Spaghetti', 'Milk'}",3
+660,0.006532462338354886,"{'French Fries', 'Mineral Water', 'Pancakes'}",3
+661,0.010131982402346354,"{'French Fries', 'Spaghetti', 'Mineral Water'}",3
+662,0.005732568990801226,"{'French Fries', 'Spaghetti', 'Pancakes'}",3
+663,0.0061325156645780565,"{'Mineral Water', 'Frozen Smoothie', 'Milk'}",3
+664,0.005599253432875617,"{'Spaghetti', 'Frozen Smoothie', 'Milk'}",3
+665,0.006799093454206106,"{'Spaghetti', 'Mineral Water', 'Frozen Smoothie'}",3
+666,0.005732568990801226,"{'Frozen Vegetables', 'Ground Beef', 'Milk'}",3
+667,0.009198773496867084,"{'Frozen Vegetables', 'Ground Beef', 'Mineral Water'}",3
+668,0.008665511265164644,"{'Frozen Vegetables', 'Ground Beef', 'Spaghetti'}",3
+669,0.011065191307825623,"{'Frozen Vegetables', 'Mineral Water', 'Milk'}",3
+670,0.008265564591387815,"{'Frozen Vegetables', 'Spaghetti', 'Milk'}",3
+671,0.006532462338354886,"{'Frozen Vegetables', 'Mineral Water', 'Olive Oil'}",3
+672,0.0061325156645780565,"{'Frozen Vegetables', 'Mineral Water', 'Pancakes'}",3
+673,0.007199040127982935,"{'Frozen Vegetables', 'Mineral Water', 'Shrimp'}",3
+674,0.005065991201173177,"{'Frozen Vegetables', 'Soup', 'Mineral Water'}",3
+675,0.011998400213304892,"{'Frozen Vegetables', 'Spaghetti', 'Mineral Water'}",3
+676,0.005865884548726837,"{'Frozen Vegetables', 'Tomatoes', 'Mineral Water'}",3
+677,0.005732568990801226,"{'Frozen Vegetables', 'Spaghetti', 'Olive Oil'}",3
+678,0.005999200106652446,"{'Frozen Vegetables', 'Spaghetti', 'Shrimp'}",3
+679,0.006665777896280496,"{'Frozen Vegetables', 'Tomatoes', 'Spaghetti'}",3
+680,0.005065991201173177,"{'Grated Cheese', 'Ground Beef', 'Mineral Water'}",3
+681,0.005332622317024397,"{'Grated Cheese', 'Ground Beef', 'Spaghetti'}",3
+682,0.006265831222503666,"{'Grated Cheese', 'Spaghetti', 'Mineral Water'}",3
+683,0.005199306759098787,"{'Ground Beef', 'Mineral Water', 'Green Tea'}",3
+684,0.006399146780429276,"{'Ground Beef', 'Spaghetti', 'Green Tea'}",3
+685,0.005732568990801226,"{'Mineral Water', 'Green Tea', 'Milk'}",3
+686,0.005199306759098787,"{'Spaghetti', 'Green Tea', 'Milk'}",3
+687,0.005732568990801226,"{'Green Tea', 'Mineral Water', 'Pancakes'}",3
+688,0.008265564591387815,"{'Spaghetti', 'Mineral Water', 'Green Tea'}",3
+689,0.006665777896280496,"{'Herb & Pepper', 'Ground Beef', 'Mineral Water'}",3
+690,0.006399146780429276,"{'Herb & Pepper', 'Ground Beef', 'Spaghetti'}",3
+691,0.011065191307825623,"{'Ground Beef', 'Mineral Water', 'Milk'}",3
+692,0.009732035728569524,"{'Ground Beef', 'Spaghetti', 'Milk'}",3
+693,0.006665777896280496,"{'Ground Beef', 'Mineral Water', 'Olive Oil'}",3
+694,0.007465671243834155,"{'Ground Beef', 'Mineral Water', 'Pancakes'}",3
+695,0.005065991201173177,"{'Ground Beef', 'Mineral Water', 'Shrimp'}",3
+696,0.005065991201173177,"{'Soup', 'Ground Beef', 'Mineral Water'}",3
+697,0.017064391414478068,"{'Spaghetti', 'Mineral Water', 'Ground Beef'}",3
+698,0.005465937874950006,"{'Tomatoes', 'Ground Beef', 'Mineral Water'}",3
+699,0.0061325156645780565,"{'Ground Beef', 'Spaghetti', 'Olive Oil'}",3
+700,0.006399146780429276,"{'Ground Beef', 'Spaghetti', 'Pancakes'}",3
+701,0.005999200106652446,"{'Ground Beef', 'Spaghetti', 'Shrimp'}",3
+702,0.005599253432875617,"{'Tomatoes', 'Ground Beef', 'Spaghetti'}",3
+703,0.005999200106652446,"{'Herb & Pepper', 'Spaghetti', 'Mineral Water'}",3
+704,0.005599253432875617,"{'Spaghetti', 'Mineral Water', 'Low Fat Yogurt'}",3
+705,0.008532195707239034,"{'Mineral Water', 'Olive Oil', 'Milk'}",3
+706,0.007865617917610986,"{'Mineral Water', 'Pancakes', 'Milk'}",3
+707,0.007865617917610986,"{'Mineral Water', 'Shrimp', 'Milk'}",3
+708,0.008532195707239034,"{'Soup', 'Mineral Water', 'Milk'}",3
+709,0.01573123583522197,"{'Spaghetti', 'Mineral Water', 'Milk'}",3
+710,0.006532462338354886,"{'Tomatoes', 'Mineral Water', 'Milk'}",3
+711,0.0061325156645780565,"{'Turkey', 'Mineral Water', 'Milk'}",3
+712,0.005065991201173177,"{'Whole Wheat Rice', 'Mineral Water', 'Milk'}",3
+713,0.007199040127982935,"{'Spaghetti', 'Olive Oil', 'Milk'}",3
+714,0.005865884548726837,"{'Tomatoes', 'Spaghetti', 'Milk'}",3
+715,0.005199306759098787,"{'Soup', 'Mineral Water', 'Olive Oil'}",3
+716,0.010265297960271964,"{'Spaghetti', 'Mineral Water', 'Olive Oil'}",3
+717,0.011465137981602452,"{'Spaghetti', 'Mineral Water', 'Pancakes'}",3
+718,0.006799093454206106,"{'Spaghetti', 'Mineral Water', 'Salmon'}",3
+719,0.008532195707239034,"{'Spaghetti', 'Mineral Water', 'Shrimp'}",3
+720,0.007465671243834155,"{'Soup', 'Spaghetti', 'Mineral Water'}",3
+721,0.009332089054792695,"{'Tomatoes', 'Spaghetti', 'Mineral Water'}",3
+722,0.006399146780429276,"{'Spaghetti', 'Mineral Water', 'Turkey'}",3
+723,0.006265831222503666,"{'Spaghetti', 'Whole Wheat Rice', 'Mineral Water'}",3
+724,0.005065991201173177,"{'Spaghetti', 'Olive Oil', 'Pancakes'}",3
