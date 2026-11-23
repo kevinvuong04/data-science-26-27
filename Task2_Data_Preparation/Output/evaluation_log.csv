@@ -2,7 +2,7 @@ Modell;Modul;Beschreibung;Anzahl Features;MAE_train;MAE_val;R2_train;R2_val;Delt
 Baseline (alle Features, Median-Imputation);Baseline;Originaldaten, alle 14 numerischen Features, NaN durch Trainings-Median ersetzt;14;1,3261;1,3417;0,3183;0,359;0,0;0,0;0,0;0,0156
 M1 Regelkorrekturen (Konzentrationen >= 0, Regen pro Stunde);M1;negative Konzentrationen auf 0, rain_vol -> rain_hourly;14;1,3263;1,342;0,3185;0,3594;-0,0003;-0,0205;0,0004;0,0157
 M2 Mittelwert-Imputation;M2;NaN durch Trainings-Mittelwert statt Median;14;1,329;1,3439;0,3153;0,3596;-0,0022;-0,1629;0,0005;0,0149
-M2 Regressionsimputation (co2, ufp, o3);M2;Lineare Regression aus no, no2, black_carbon (Lab 04), Rest Median;14;1,3029;1,3319;0,3529;0,3897;0,0098;0,7328;0,0307;0,029
+M2 Regressionsimputation (co2, ufp, o3);M2;Lineare Regression aus no2 und black_carbon (Lab 04), Rest Median;14;1,2987;1,3265;0,3561;0,3904;0,0152;1,1345;0,0314;0,0278
 M2 Zeilen ohne pm25_lowcost löschen (nur Training);M2;Listwise Deletion im Training, Rest Median;14;1,3406;1,2951;0,3454;0,4211;0,0466;3,4724;0,062;-0,0454
 M3 Winsorisierung 95. Perzentil;M3;Kappung oben am 95. Perzentil (Vorschlag Task 1);14;0,8513;0,8792;0,6951;0,6854;0,4625;34,4724;0,3263;0,0279
 M3 Winsorisierung 99. Perzentil;M3;Kappung oben am 99. Perzentil;14;1,0597;1,068;0,4985;0,5249;0,2737;20,3988;0,1658;0,0084
