@@ -1,6 +1,6 @@
 # Dokumentation Task 2 – Data Preparation
 
-Stand: 23.11.2026
+Stand: 23.11.2026 (überarbeitet)
 
 ## Wo liegt was?
 
@@ -9,39 +9,36 @@ Stand: 23.11.2026
   - `Data/` Originaldaten, `Output/` Log-File, Testauswertung, exportierte Datensätze für Task 3
 - **Kontext:** dieser Branch (`AI`), Ordner `Kontext/`
 
-## Vorgehen
+## Vorgehen (Stand nach Review)
 
-1. Split wie in Task 1: `train_test_split(test_size=0.2, random_state=42)`. Zeilen ohne Label werden nur im Trainingsanteil entfernt.
-2. Baseline mit **allen 14 numerischen Features** und Median-Imputation (Feedback Vorjahr: keine Baseline auf wenigen Features).
-3. Sechs Module mit einheitlicher Schnittstelle `modul(train_part, other_parts, method)`:
-   - M1 Regelkorrekturen (negative `no` → 0, kumulierter Zähler `rain_vol` → `rain_hourly`)
-   - M2 Missing Values (Median, Mittelwert, zeitliche Interpolation, Zeilenlöschung nur im Training)
+1. Split exakt wie Task 1b: Zeilen ohne Label vor dem Split entfernen, dann 80/20 mit `random_state=42` (2.727 / 682 Zeilen). Kontrolle: Baseline-MAE 1,3417 = Task-1b-Modell mit allen Features.
+2. Baseline mit allen 14 numerischen Features und Median-Imputation.
+3. Sechs Module mit einheitlicher Schnittstelle (fit auf Training, Anwendung auf Validierung/Test):
+   - M1 Regelkorrekturen (alle Konzentrationen >= 0, `rain_vol` -> `rain_hourly`)
+   - M2 Missing Values (Median, Mittelwert, Regressionsimputation aus Lab 04, Zeilenlöschung nur im Training)
    - M3 Outlier Handling (Winsor 95/99, IQR, Pearson-optimiert, Log, Rang)
-   - M4 Scaling (Standardisierung)
-   - M5 Feature Engineering (Tageszeit sin/cos, Windrichtung sin/cos, `pm25_lowcost × relative_humidity`)
-   - M6 Feature Selection (Korrelationsfilter, VIF)
-4. Jedes Modul einzeln, danach Kombinationen und eine Kombinationsmatrix (M2 × M3 × M5). Insgesamt 36 Experimente plus Baseline im Log-File.
-5. Auswahl nach Validierungs-MAE, danach einmalig auf dem Test. Anschließend Analyse der Lücke zwischen Validierung und Test.
+   - M4 Scaling, M5 Feature Engineering, M6 Feature Selection
+4. Einzelmodule, Kombinationen, Kombinationsmatrix (36 Experimente + Baseline im Log).
+5. Kontrollversuche (Abschnitt 6.1) für alle selbst gesetzten Schwellen.
+6. Annahmen-Register (Abschnitt 12.2): Jede Annahme mit Beleg im Notebook.
 
-## Interpretation des Prof-Hinweises (Pearson vs. Spearman)
+## Änderungen nach dem Review
 
-- `pm25_lowcost`: Pearson 0,08 gegenüber Spearman 0,72. Der Zusammenhang ist eigentlich stark und monoton, wird aber von wenigen Extremwerten (bis 595 µg/m³) verdeckt.
-- Über die Lücke zwischen beiden Korrelationen werden die Features für das Outlier Handling automatisch bestimmt: `pm25_lowcost`, `black_carbon`, `no`.
-- Die Extremwerte treten nachts bei über 90 % Luftfeuchte auf (Feuchteeffekt optischer Sensoren). Daraus folgt das Interaktionsfeature in M5.
-- Die Formulierung „bessere Raum" aus der Notiz ist nicht eindeutig. Abgedeckt sind die naheliegenden Lesarten: bessere Kappungsgrenze (IQR bzw. 95 % statt 99 %), Rangraum (Rang-Transformation = Spearman) und Log-Raum. Im Modell schneiden Kappung (95 % bzw. IQR) am besten ab. **Bitte im Coaching kurz nachfragen, was genau gemeint war.**
+- Split war nicht identisch mit Task 1 -> korrigiert.
+- Zeitliche Interpolation entfernt (nicht aus den Labs, mischt Validierungswerte ins Training) -> Regressionsimputation aus Lab 04.
+- Stress-Validierung entfernt (keine saubere Ursachentrennung) -> Testanalyse nur beschreibend.
+- Formulierungen vorsichtiger: Pearson/Spearman-Lücke = Hinweis, Feuchteeffekt = Hypothese.
+- Negative Werte: Regel für alle Konzentrationen (142 negative o3-Werte im Test).
+- Quellentabelle je Modul; eigene Ergänzungen gekennzeichnet.
 
 ## Ergebnisse
 
 | | Val MAE | Val R² | Test MAE | Test R² |
 |---|---|---|---|---|
-| Baseline | 1,27 | 0,32 | 2,21 | −0,13 |
-| Final (M1 + M2 Zeilenlöschung + M3 Winsor 95 + alle M5-Features) | 0,78 | 0,74 | 1,63 | 0,42 |
+| Baseline | 1,34 | 0,36 | 2,22 | −0,15 |
+| Final (M1 + Zeilenlöschung + IQR-Kappung + Feuchte-Interaktion) | 0,77 | 0,79 | 1,58 | 0,45 |
 
-Wichtigste Erkenntnisse:
-- Outlier Handling bringt allein etwa −33 % MAE, die Feuchte-Interaktion danach weitere etwa −6 Prozentpunkte.
-- Scaling: exakt 0 % Effekt (bei linearer Regression erwartbar und im Notebook erklärt).
-- Die Top-4-Modelle liegen innerhalb von 0,01 MAE. Entscheidend ist die Kombination M1 + M3 + M5, nicht die Wahl der M2-Variante.
-- Validierung vs. Test: Im Test fehlen Wetterdaten zu 67 % und `black_carbon` zu 49 %. Außerdem liegt der Test in einer anderen Saison (Nov/Dez). Die Stress-Validierung zeigt, dass etwa die Hälfte der Lücke auf die fehlenden Werte zurückgeht.
+Kontrollversuche: Lücken-Schwelle 0,15 besser als 0,10/0,25; Kappung nur oben besser als beidseitig; ohne Korrelationsfilter am besten.
 
 ## Offene Punkte / Hinweise fürs Team
 
