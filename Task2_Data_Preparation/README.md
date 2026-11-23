@@ -26,7 +26,9 @@ Das Notebook aus diesem Ordner heraus starten, da die Pfade relativ sind (`Data/
 
 ## Ergebnis in Kürze
 
+Split identisch mit Task 1b (Zeilen ohne Label vor dem Split entfernt, 80/20, `random_state=42`).
+
 | | Validierung MAE | Validierung R² | Test MAE | Test R² |
 |---|---|---|---|---|
-| Baseline (alle Features, Median) | 1,27 | 0,32 | 2,21 | −0,13 |
-| Finales Modell (M1 + M2 + M3 Winsor 95 + M5) | 0,78 | 0,74 | 1,63 | 0,42 |
+| Baseline (alle Features, Median) | 1,34 | 0,36 | 2,22 | −0,15 |
+| Finales Modell (M1 + Zeilenlöschung + IQR-Kappung + Feuchte-Interaktion) | 0,77 | 0,79 | 1,58 | 0,45 |
