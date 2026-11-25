@@ -1,30 +1,45 @@
 Modell | Art | Beschreibung | Features | MAE Train | MAE Val | R2 Train | R2 Val | dMAE vs. Baseline
-Baseline | Baseline | Originaldaten, 14 numerische Features, NaN mit Trainings-Median | 14 | 1.3261 | 1.3417 | 0.3183 | 0.3590 | +0.0000
-Negativwerte auf 0 | kumulativ | negative Konzentrationen auf 0 gesetzt | 14 | 1.3257 | 1.3412 | 0.3186 | 0.3594 | -0.0005
-Negativwerte auf 0 | isoliert | negative Konzentrationen auf 0 gesetzt | 14 | 1.3257 | 1.3412 | 0.3186 | 0.3594 | -0.0005
-ENTSCHEIDUNG Negativwerte auf 0: ja (MAE sinkt, Werte sind physikalisch unmöglich)
-Ausreißer gekappt | kumulativ | IQR-Ausreißer der Schadstoffe durch 5./95. Perzentil ersetzt | 14 | 0.8627 | 0.8751 | 0.6865 | 0.6860 | -0.4666
-Ausreißer gekappt | isoliert | IQR-Ausreißer der Schadstoffe durch 5./95. Perzentil ersetzt | 14 | 0.8637 | 0.8754 | 0.6861 | 0.6856 | -0.4663
-ENTSCHEIDUNG Ausreißer gekappt: ja (MAE sinkt deutlich)
-Imputation nur Median | kumulativ | alle Lücken mit Trainings-Median | 14 | 0.8627 | 0.8751 | 0.6865 | 0.6860 | -0.4666
-Imputation je Feature | kumulativ | Nachbarstunden, Regression für ['no', 'no2', 'black_carbon', 'ufp', 'co2', 'o3', 'relative_humidity', 'temperature', 'pm25_lowcost'], Rest Median | 14 | 0.8362 | 0.8409 | 0.7023 | 0.7139 | -0.5008
-Imputation je Feature | isoliert | Nachbarstunden, Regression, Rest Median | 14 | 1.3087 | 1.3269 | 0.3540 | 0.3998 | -0.0148
+Baseline | Baseline | Originaldaten, 14 numerische Features, NaN mit Trainings-Median | 14 | 1.3849 | 1.3852 | 0.3228 | 0.0976 | +0.0000
+Baseline zufälliger Split | Vergleich | wie Baseline, aber zufälliger Split aus Aufgabe 1 | 14 | 1.3261 | 1.3417 | 0.3183 | 0.3590 | -0.0435
+Negativwerte auf 0 | kumulativ | negative Konzentrationen auf 0 gesetzt | 14 | 1.3844 | 1.3865 | 0.3232 | 0.0961 | +0.0013
+Negativwerte auf 0 | isoliert | negative Konzentrationen auf 0 gesetzt | 14 | 1.3844 | 1.3865 | 0.3232 | 0.0961 | +0.0013
+ENTSCHEIDUNG Negativwerte auf 0: ja (Plausibilitätskorrektur, negative Konzentrationen sind unmöglich)
+Ausreißer Mittelwert | kumulativ | IQR-Ausreißer von ['pm25_lowcost'] durch Mittelwert ersetzt | 14 | 0.9141 | 1.2813 | 0.6482 | 0.1648 | -0.1039
+Ausreißer Median | kumulativ | IQR-Ausreißer von ['pm25_lowcost'] durch Median ersetzt | 14 | 1.0043 | 1.4756 | 0.5570 | 0.0280 | +0.0903
+Ausreißer Nachbarstunden | kumulativ | IQR-Ausreißer von ['pm25_lowcost'] durch Nachbarstunden ersetzt | 14 | 0.8779 | 1.4001 | 0.6752 | -0.0045 | +0.0149
+Ausreißer 5./95. Perzentil | kumulativ | IQR-Ausreißer von ['pm25_lowcost'] durch 5./95. Perzentil ersetzt | 14 | 0.8520 | 1.2765 | 0.7117 | 0.0435 | -0.1087
+Ausreißer 5./95. Perzentil (alle Schadstoffe) | kumulativ | IQR-Ausreißer von ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'co2'] durch 5./95. Perzentil ersetzt | 14 | 0.7967 | 1.3792 | 0.7556 | -0.0448 | -0.0060
+Ausreißer 5./95. Perzentil | isoliert | nur diese Ausreißerbehandlung | 14 | 0.8524 | 1.2757 | 0.7116 | 0.0450 | -0.1095
+ENTSCHEIDUNG Ausreißer 5./95. Perzentil: ja (niedrigster MAE der Varianten)
+ENTSCHEIDUNG Ausreißer Mittelwert: nein (höherer MAE als Ausreißer 5./95. Perzentil)
+ENTSCHEIDUNG Ausreißer Median: nein (höherer MAE als Ausreißer 5./95. Perzentil)
+ENTSCHEIDUNG Ausreißer Nachbarstunden: nein (höherer MAE als Ausreißer 5./95. Perzentil)
+ENTSCHEIDUNG Ausreißer 5./95. Perzentil (alle Schadstoffe): nein (höherer MAE als Ausreißer 5./95. Perzentil)
+Imputation nur Median | kumulativ | alle Lücken mit Trainings-Median | 14 | 0.8520 | 1.2765 | 0.7117 | 0.0435 | -0.1087
+Imputation je Feature | kumulativ | Nachbarstunden, Regression für ['no2', 'black_carbon', 'ufp', 'co2', 'o3', 'relative_humidity', 'temperature', 'glob_rad'], Rest Median | 14 | 0.8349 | 1.0806 | 0.7278 | 0.3198 | -0.3046
+Imputation je Feature | isoliert | Nachbarstunden, Regression, Rest Median | 14 | 1.3605 | 1.4195 | 0.3728 | 0.0820 | +0.0343
 ENTSCHEIDUNG Imputation je Feature: ja (genauer als nur Median)
 ENTSCHEIDUNG Imputation nur Median: nein (schlechter als Imputation je Feature)
-Interaktion Lowcost x Feuchte | kumulativ | neues Feature lowcost_x_humidity | 15 | 0.7586 | 0.7621 | 0.7614 | 0.7872 | -0.5796
-Interaktion Lowcost x Feuchte | isoliert | neues Feature lowcost_x_humidity | 15 | 1.1399 | 1.1605 | 0.4642 | 0.5058 | -0.1812
+Interaktion Lowcost x Feuchte | kumulativ | neues Feature lowcost_x_humidity | 15 | 0.7762 | 0.8395 | 0.7707 | 0.6133 | -0.5457
+Interaktion Lowcost x Feuchte | isoliert | neues Feature lowcost_x_humidity | 15 | 1.1843 | 1.2664 | 0.4754 | 0.2842 | -0.1188
 ENTSCHEIDUNG Interaktion Lowcost x Feuchte: ja (MAE sinkt deutlich)
-PowerTransformer | kumulativ | PowerTransformer auf ['pm25_lowcost', 'no', 'black_carbon', 'wind_speed', 'glob_rad', 'lowcost_x_humidity'] | 15 | 0.8256 | 0.8319 | 0.7087 | 0.7240 | -0.5098
-PowerTransformer | isoliert | PowerTransformer auf ['pm25_lowcost', 'no', 'black_carbon', 'wind_speed', 'glob_rad'] | 14 | 0.8689 | 0.8966 | 0.6771 | 0.6692 | -0.4451
+PowerTransformer | kumulativ | PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'lowcost_x_humidity'] | 15 | 0.8365 | 1.2838 | 0.7356 | 0.2753 | -0.1014
+PowerTransformer | isoliert | PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad'] | 14 | 0.8717 | 1.4665 | 0.7110 | 0.0042 | +0.0813
 ENTSCHEIDUNG PowerTransformer: nein (MAE steigt)
-StandardScaler | kumulativ | StandardScaler auf allen Features | 15 | 0.7586 | 0.7621 | 0.7614 | 0.7872 | -0.5796
-StandardScaler | isoliert | StandardScaler auf allen Features | 14 | 1.3261 | 1.3417 | 0.3183 | 0.3590 | +0.0000
+StandardScaler | kumulativ | StandardScaler auf allen Features | 15 | 0.7762 | 0.8395 | 0.7707 | 0.6133 | -0.5457
+StandardScaler | isoliert | StandardScaler auf allen Features | 14 | 1.3849 | 1.3852 | 0.3228 | 0.0976 | -0.0000
 ENTSCHEIDUNG StandardScaler: ja (MAE unverändert, Koeffizienten vergleichbar, wichtig für Aufgabe 3)
-ohne rain_vol | kumulativ | rain_vol entfernt | 14 | 0.7580 | 0.7614 | 0.7607 | 0.7863 | -0.5803
-ENTSCHEIDUNG ohne rain_vol: nein (MAE steigt oder R² sinkt)
-ohne lowcost_x_humidity | kumulativ | lowcost_x_humidity entfernt | 14 | 0.8362 | 0.8409 | 0.7023 | 0.7139 | -0.5008
-ENTSCHEIDUNG ohne lowcost_x_humidity: nein (MAE steigt oder R² sinkt)
-ohne no2 | kumulativ | no2 entfernt | 14 | 0.7619 | 0.7692 | 0.7601 | 0.7840 | -0.5725
-ENTSCHEIDUNG ohne no2: nein (MAE steigt oder R² sinkt)
-TEST Baseline | 1464 Zeilen, 1419 bewertet | MAE Test 2.2193 | R2 Test -0.1453
-TEST Finales Modell | 1464 Zeilen, 1419 bewertet | MAE Test 1.6764 | R2 Test 0.3792
+ohne no | kumulativ | no entfernt | 14 | 0.8181 | 0.8099 | 0.7360 | 0.6240 | -0.5753
+ENTSCHEIDUNG ohne no: ja (MAE sinkt)
+ohne o3 | kumulativ | o3 entfernt | 13 | 0.8494 | 0.7514 | 0.7255 | 0.6716 | -0.6338
+ENTSCHEIDUNG ohne o3: ja (MAE sinkt)
+ohne rain_vol | kumulativ | rain_vol entfernt | 12 | 0.8519 | 0.7372 | 0.7248 | 0.6922 | -0.6480
+ENTSCHEIDUNG ohne rain_vol: ja (MAE sinkt)
+ohne glob_rad | kumulativ | glob_rad entfernt | 11 | 0.8867 | 0.7546 | 0.6996 | 0.6767 | -0.6306
+ENTSCHEIDUNG ohne glob_rad: nein (MAE steigt)
+ohne lowcost_x_humidity | kumulativ | lowcost_x_humidity entfernt | 11 | 0.9094 | 0.9395 | 0.6711 | 0.4411 | -0.4458
+ENTSCHEIDUNG ohne lowcost_x_humidity: nein (MAE steigt)
+ohne no2 | kumulativ | no2 entfernt | 11 | 0.8585 | 0.7208 | 0.7223 | 0.7087 | -0.6645
+ENTSCHEIDUNG ohne no2: ja (MAE sinkt)
+TEST Baseline | 1464 Zeilen, 1419 bewertet | MAE Test 2.2015 | R2 Test -0.1199
+TEST Finales Modell | 1464 Zeilen, 1419 bewertet | MAE Test 1.8398 | R2 Test 0.1616

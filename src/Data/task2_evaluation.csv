@@ -1,18 +1,26 @@
 Modell,Art,Features,MAE_Train,MAE_Val,R2_Train,R2_Val,dMAE_abs,dMAE_%,dR2_abs,Übernommen
-Baseline,Baseline,14,1.3261,1.3417,0.3183,0.359,0.0,0.0,0.0,-
-Negativwerte auf 0,kumulativ,14,1.3257,1.3412,0.3186,0.3594,-0.0005,-0.0382,0.0004,ja
-Negativwerte auf 0,isoliert,14,1.3257,1.3412,0.3186,0.3594,-0.0005,-0.0382,0.0004,-
-Ausreißer gekappt,kumulativ,14,0.8627,0.8751,0.6865,0.686,-0.4666,-34.7739,0.327,ja
-Ausreißer gekappt,isoliert,14,0.8637,0.8754,0.6861,0.6856,-0.4663,-34.7523,0.3266,-
-Imputation nur Median,kumulativ,14,0.8627,0.8751,0.6865,0.686,-0.4666,-34.7739,0.327,nein
-Imputation je Feature,kumulativ,14,0.8362,0.8409,0.7023,0.7139,-0.5008,-37.3256,0.3549,ja
-Imputation je Feature,isoliert,14,1.3087,1.3269,0.354,0.3998,-0.0148,-1.0998,0.0408,-
-Interaktion Lowcost x Feuchte,kumulativ,15,0.7586,0.7621,0.7614,0.7872,-0.5796,-43.1983,0.4281,ja
-Interaktion Lowcost x Feuchte,isoliert,15,1.1399,1.1605,0.4642,0.5058,-0.1812,-13.5055,0.1468,-
-PowerTransformer,kumulativ,15,0.8256,0.8319,0.7087,0.724,-0.5098,-37.9968,0.365,nein
-PowerTransformer,isoliert,14,0.8689,0.8966,0.6771,0.6692,-0.4451,-33.173,0.3102,-
-StandardScaler,kumulativ,15,0.7586,0.7621,0.7614,0.7872,-0.5796,-43.1983,0.4281,ja
-StandardScaler,isoliert,14,1.3261,1.3417,0.3183,0.359,0.0,0.0,0.0,-
-ohne rain_vol,kumulativ,14,0.758,0.7614,0.7607,0.7863,-0.5803,-43.2515,0.4273,nein
-ohne lowcost_x_humidity,kumulativ,14,0.8362,0.8409,0.7023,0.7139,-0.5008,-37.3256,0.3549,nein
-ohne no2,kumulativ,14,0.7619,0.7692,0.7601,0.784,-0.5725,-42.6705,0.4249,nein
+Baseline,Baseline,14,1.3849,1.3852,0.3228,0.0976,0.0,0.0,0.0,-
+Baseline zufälliger Split,Vergleich,14,1.3261,1.3417,0.3183,0.359,-0.0435,-3.141,0.2615,-
+Negativwerte auf 0,kumulativ,14,1.3844,1.3865,0.3232,0.0961,0.0013,0.0942,-0.0015,ja
+Negativwerte auf 0,isoliert,14,1.3844,1.3865,0.3232,0.0961,0.0013,0.0942,-0.0015,-
+Ausreißer Mittelwert,kumulativ,14,0.9141,1.2813,0.6482,0.1648,-0.1039,-7.5021,0.0672,nein
+Ausreißer Median,kumulativ,14,1.0043,1.4756,0.557,0.028,0.0903,6.5223,-0.0696,nein
+Ausreißer Nachbarstunden,kumulativ,14,0.8779,1.4001,0.6752,-0.0045,0.0149,1.0754,-0.1021,nein
+Ausreißer 5./95. Perzentil,kumulativ,14,0.852,1.2765,0.7117,0.0435,-0.1087,-7.8486,-0.0541,ja
+Ausreißer 5./95. Perzentil (alle Schadstoffe),kumulativ,14,0.7967,1.3792,0.7556,-0.0448,-0.006,-0.435,-0.1424,nein
+Ausreißer 5./95. Perzentil,isoliert,14,0.8524,1.2757,0.7116,0.045,-0.1095,-7.9041,-0.0526,-
+Imputation nur Median,kumulativ,14,0.852,1.2765,0.7117,0.0435,-0.1087,-7.8486,-0.0541,nein
+Imputation je Feature,kumulativ,14,0.8349,1.0806,0.7278,0.3198,-0.3046,-21.9868,0.2222,ja
+Imputation je Feature,isoliert,14,1.3605,1.4195,0.3728,0.082,0.0343,2.4777,-0.0156,-
+Interaktion Lowcost x Feuchte,kumulativ,15,0.7762,0.8395,0.7707,0.6133,-0.5457,-39.3941,0.5157,ja
+Interaktion Lowcost x Feuchte,isoliert,15,1.1843,1.2664,0.4754,0.2842,-0.1188,-8.5787,0.1866,-
+PowerTransformer,kumulativ,15,0.8365,1.2838,0.7356,0.2753,-0.1014,-7.3207,0.1777,nein
+PowerTransformer,isoliert,14,0.8717,1.4665,0.711,0.0042,0.0813,5.8671,-0.0934,-
+StandardScaler,kumulativ,15,0.7762,0.8395,0.7707,0.6133,-0.5457,-39.3941,0.5157,ja
+StandardScaler,isoliert,14,1.3849,1.3852,0.3228,0.0976,-0.0,-0.0,0.0,-
+ohne no,kumulativ,14,0.8181,0.8099,0.736,0.624,-0.5753,-41.5342,0.5264,ja
+ohne o3,kumulativ,13,0.8494,0.7514,0.7255,0.6716,-0.6338,-45.7544,0.574,ja
+ohne rain_vol,kumulativ,12,0.8519,0.7372,0.7248,0.6922,-0.648,-46.7829,0.5946,ja
+ohne glob_rad,kumulativ,11,0.8867,0.7546,0.6996,0.6767,-0.6306,-45.5267,0.5791,nein
+ohne lowcost_x_humidity,kumulativ,11,0.9094,0.9395,0.6711,0.4411,-0.4458,-32.1798,0.3435,nein
+ohne no2,kumulativ,11,0.8585,0.7208,0.7223,0.7087,-0.6645,-47.9681,0.6111,ja
