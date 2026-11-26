@@ -65,12 +65,16 @@ StandardScaler | kumulativ | StandardScaler auf allen Features | 13 | 0.8800 | 0
 StandardScaler | isoliert | StandardScaler auf allen Features | 14 | 1.3849 | 1.3852 | 1.2860 | 0.3228 | 0.0976 | 0.1734 | -0.0000
 ENTSCHEIDUNG StandardScaler: ja (MAE unverändert, Koeffizienten vergleichbar, wichtig für Aufgabe 3)
 ohne glob_rad | kumulativ | glob_rad entfernt | 12 | 0.8998 | 0.8971 | 1.0824 | 0.7070 | 0.5787 | 0.3592 | -0.2036
+ohne glob_rad | isoliert | nur glob_rad entfernt | 13 | 1.3963 | 1.2368 | 1.3132 | 0.3095 | 0.2482 | 0.1506 | +0.0273
 ENTSCHEIDUNG ohne glob_rad: ja (MAE (maskiert) sinkt)
 ohne rain_per_hour | kumulativ | rain_per_hour entfernt | 11 | 0.9080 | 0.9012 | 1.0782 | 0.7035 | 0.5766 | 0.3677 | -0.2077
+ohne rain_per_hour | isoliert | nur rain_per_hour entfernt | 13 | 1.3851 | 1.2215 | 1.2828 | 0.3171 | 0.2650 | 0.1684 | -0.0032
 ENTSCHEIDUNG ohne rain_per_hour: ja (MAE (maskiert) sinkt)
 ohne black_carbon | kumulativ | black_carbon entfernt | 10 | 1.0230 | 0.8619 | 1.3157 | 0.6489 | 0.6068 | 0.0693 | +0.0297
+ohne black_carbon | isoliert | nur black_carbon entfernt | 13 | 1.4344 | 1.2736 | 1.3265 | 0.2747 | 0.1762 | 0.1716 | +0.0405
 ENTSCHEIDUNG ohne black_carbon: nein (MAE (maskiert) steigt)
 ohne no2 | kumulativ | no2 entfernt | 10 | 0.9199 | 0.8684 | 1.0754 | 0.6995 | 0.6076 | 0.3541 | -0.2105
+ohne no2 | isoliert | nur no2 entfernt | 13 | 1.3888 | 1.1645 | 1.2898 | 0.3002 | 0.3295 | 0.1217 | +0.0039
 ENTSCHEIDUNG ohne no2: ja (MAE (maskiert) sinkt)
 TEST Baseline | 1464 Zeilen, 1419 bewertet | MAE Test 2.2015 | R2 Test -0.1199
 TEST Finales Modell | 1464 Zeilen, 1419 bewertet | MAE Test 1.4677 | R2 Test 0.5274
