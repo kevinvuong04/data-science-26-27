@@ -1,63 +1,68 @@
-Modell,Art,Features,MAE_Train,R2_Train,MAE_Val,R2_Val,MAE_Val_mask,R2_Val_mask,dMAE_Val_%,dMAE_mask_abs,dMAE_mask_%,dR2_mask_abs,Übernommen
-Baseline,Baseline,14,1.3849,0.3228,1.3852,0.0976,1.286,0.1734,0.0,0.0,0.0,0.0,-
-Negativwerte auf 0,kumulativ,14,1.3844,0.3232,1.3865,0.0961,1.2862,0.1732,0.0942,0.0002,0.0189,-0.0003,ja
-Negativwerte auf 0,isoliert,14,1.3844,0.3232,1.3865,0.0961,1.2862,0.1732,0.0942,0.0002,0.0189,-0.0003,-
-Regen pro Stunde,kumulativ,14,1.3852,0.3172,1.2223,0.2647,1.2826,0.1681,-11.7637,-0.0033,-0.2605,-0.0053,ja
-Regen pro Stunde,isoliert,14,1.3857,0.3168,1.222,0.2649,1.2826,0.1681,-11.7839,-0.0034,-0.2623,-0.0054,-
-Ausreißer Mittelwert | keine Transformation | co2/o3 behalten,kumulativ,14,0.9119,0.6459,1.1498,0.3106,1.1996,0.2124,-16.9966,-0.0863,-6.7138,0.039,nein
-Ausreißer Mittelwert | log(1+x) | co2/o3 behalten,kumulativ,14,0.8769,0.6628,1.141,0.3362,1.2249,0.2027,-17.6294,-0.0611,-4.7491,0.0293,nein
-Ausreißer Mittelwert | PowerTransformer | co2/o3 behalten,kumulativ,14,0.8478,0.6881,1.2951,0.1846,1.3156,0.1443,-6.5025,0.0297,2.3067,-0.0291,nein
-Ausreißer Median | keine Transformation | co2/o3 behalten,kumulativ,14,1.0061,0.5531,1.2875,0.1716,1.2845,0.0994,-7.0565,-0.0015,-0.1132,-0.074,nein
-Ausreißer Median | log(1+x) | co2/o3 behalten,kumulativ,14,0.9663,0.5891,1.2563,0.3106,1.2239,0.2283,-9.3097,-0.062,-4.8225,0.0549,nein
-Ausreißer Median | PowerTransformer | co2/o3 behalten,kumulativ,14,0.9364,0.6155,1.4144,0.1573,1.3121,0.1981,2.1078,0.0262,2.0359,0.0247,nein
-Ausreißer Nachbarstunden | keine Transformation | co2/o3 behalten,kumulativ,14,0.8763,0.6714,1.232,0.1554,1.3092,-0.0036,-11.0601,0.0232,1.8052,-0.177,nein
-Ausreißer Nachbarstunden | log(1+x) | co2/o3 behalten,kumulativ,14,0.8432,0.6865,1.2368,0.2186,1.3452,-0.0074,-10.7169,0.0593,4.6093,-0.1808,nein
-Ausreißer Nachbarstunden | PowerTransformer | co2/o3 behalten,kumulativ,14,0.8114,0.7136,1.4067,0.0674,1.44,-0.0526,1.5484,0.154,11.9785,-0.226,nein
-Ausreißer 5./95. Perzentil | keine Transformation | co2/o3 behalten,kumulativ,14,0.8453,0.7122,1.171,0.1934,1.2897,-0.0323,-15.4646,0.0037,0.2894,-0.2057,nein
-Ausreißer 5./95. Perzentil | log(1+x) | co2/o3 behalten,kumulativ,14,0.8423,0.7303,1.2102,0.2922,1.294,0.1312,-12.631,0.008,0.6245,-0.0422,nein
-Ausreißer 5./95. Perzentil | PowerTransformer | co2/o3 behalten,kumulativ,14,0.8333,0.7359,1.3583,0.1759,1.3527,0.1153,-1.9392,0.0668,5.1927,-0.0582,nein
-Ausreißer Winsorizing | keine Transformation | co2/o3 behalten,kumulativ,14,0.847,0.7117,1.1837,0.184,1.2978,-0.0413,-14.5509,0.0118,0.92,-0.2147,nein
-Ausreißer Winsorizing | log(1+x) | co2/o3 behalten,kumulativ,14,0.8379,0.733,1.224,0.2773,1.3096,0.1111,-11.6387,0.0236,1.8381,-0.0623,nein
-Ausreißer Winsorizing | PowerTransformer | co2/o3 behalten,kumulativ,14,0.8367,0.7359,1.3594,0.1748,1.3495,0.1238,-1.8621,0.0635,4.9383,-0.0497,nein
-Ausreißer 5./95. Perzentil (alle Schadstoffe) | keine Transformation | co2/o3 behalten,kumulativ,14,0.7894,0.757,1.3842,-0.055,1.3593,0.0047,-0.071,0.0733,5.7019,-0.1687,nein
-Ausreißer 5./95. Perzentil (alle Schadstoffe) | log(1+x) | co2/o3 behalten,kumulativ,14,0.802,0.7557,1.3901,0.0914,1.3629,0.0634,0.3505,0.077,5.9856,-0.11,nein
-Ausreißer 5./95. Perzentil (alle Schadstoffe) | PowerTransformer | co2/o3 behalten,kumulativ,14,0.8389,0.7336,1.3716,0.1615,1.3893,0.0645,-0.9839,0.1033,8.0342,-0.109,nein
-Ausreißer Mittelwert | keine Transformation | co2/o3 entfernt,kumulativ,12,0.9727,0.6203,1.0096,0.449,1.2185,0.2081,-27.1165,-0.0675,-5.2485,0.0346,nein
-Ausreißer Mittelwert | log(1+x) | co2/o3 entfernt,kumulativ,12,0.9104,0.6478,0.9951,0.5072,1.2213,0.231,-28.1619,-0.0646,-5.0239,0.0575,nein
-Ausreißer Mittelwert | PowerTransformer | co2/o3 entfernt,kumulativ,12,0.8739,0.6787,1.2036,0.3209,1.3326,0.1599,-13.1099,0.0466,3.6252,-0.0135,nein
-Ausreißer Median | keine Transformation | co2/o3 entfernt,kumulativ,12,1.0617,0.5279,1.2097,0.2214,1.3262,0.0524,-12.6714,0.0402,3.1274,-0.1211,nein
-Ausreißer Median | log(1+x) | co2/o3 entfernt,kumulativ,12,1.0086,0.5711,1.1101,0.4493,1.2348,0.1936,-19.862,-0.0511,-3.977,0.0202,nein
-Ausreißer Median | PowerTransformer | co2/o3 entfernt,kumulativ,12,0.9675,0.6044,1.3491,0.261,1.3437,0.1664,-2.6038,0.0577,4.4878,-0.0071,nein
-Ausreißer Nachbarstunden | keine Transformation | co2/o3 entfernt,kumulativ,12,0.9393,0.6459,1.0717,0.2853,1.2947,-0.0044,-22.632,0.0087,0.68,-0.1779,nein
-Ausreißer Nachbarstunden | log(1+x) | co2/o3 entfernt,kumulativ,12,0.8768,0.6722,1.0698,0.3767,1.3042,0.0263,-22.7666,0.0183,1.4206,-0.1472,nein
-Ausreißer Nachbarstunden | PowerTransformer | co2/o3 entfernt,kumulativ,12,0.8374,0.7043,1.3041,0.2064,1.4299,-0.0255,-5.8566,0.144,11.1963,-0.1989,nein
-Ausreißer 5./95. Perzentil | keine Transformation | co2/o3 entfernt,kumulativ,12,0.9124,0.6834,0.946,0.4374,1.2532,-0.0285,-31.7099,-0.0328,-2.5504,-0.2019,nein
-Ausreißer 5./95. Perzentil | log(1+x) | co2/o3 entfernt,kumulativ,12,0.8852,0.7104,0.8549,0.6091,1.1509,0.2568,-38.2831,-0.135,-10.499,0.0834,ja
-Ausreißer 5./95. Perzentil | PowerTransformer | co2/o3 entfernt,kumulativ,12,0.8688,0.7216,1.1583,0.397,1.296,0.1753,-16.3788,0.01,0.7796,0.0019,nein
-Ausreißer Winsorizing | keine Transformation | co2/o3 entfernt,kumulativ,12,0.9137,0.6828,0.9559,0.4311,1.261,-0.0363,-30.9892,-0.0249,-1.94,-0.2097,nein
-Ausreißer Winsorizing | log(1+x) | co2/o3 entfernt,kumulativ,12,0.8796,0.7129,0.8652,0.6012,1.1653,0.2414,-37.5431,-0.1206,-9.3802,0.0679,nein
-Ausreißer Winsorizing | PowerTransformer | co2/o3 entfernt,kumulativ,12,0.8724,0.7209,1.1515,0.4026,1.2916,0.1846,-16.8719,0.0056,0.4385,0.0112,nein
-Ausreißer 5./95. Perzentil (alle Schadstoffe) | keine Transformation | co2/o3 entfernt,kumulativ,12,0.8245,0.7446,1.2241,0.1747,1.361,0.0427,-11.6318,0.075,5.8354,-0.1307,nein
-Ausreißer 5./95. Perzentil (alle Schadstoffe) | log(1+x) | co2/o3 entfernt,kumulativ,12,0.8376,0.7408,1.1303,0.381,1.3051,0.1501,-18.3991,0.0191,1.4874,-0.0233,nein
-Ausreißer 5./95. Perzentil (alle Schadstoffe) | PowerTransformer | co2/o3 entfernt,kumulativ,12,0.878,0.7159,1.1168,0.4334,1.3036,0.1514,-19.3761,0.0177,1.3738,-0.0221,nein
-Ausreißer 5./95. Perzentil,isoliert,14,0.8453,0.7122,1.171,0.1934,1.2897,-0.0323,-15.4646,0.0037,0.2894,-0.2057,-
-log(1+x),isoliert,14,0.8496,0.6628,1.1988,-0.2173,1.3291,-0.4545,-13.4554,0.0431,3.3532,-0.6279,-
-co2/o3 entfernt,isoliert,12,1.426,0.2777,1.2507,0.2584,1.399,0.087,-9.7069,0.1131,8.7932,-0.0864,-
-Imputation nur Median,kumulativ,12,0.8852,0.7104,0.8549,0.6091,1.1509,0.2568,-38.2831,-0.135,-10.499,0.0834,nein
-Imputation Nachbarstunden + Median,kumulativ,12,0.8801,0.713,0.86,0.6061,1.146,0.2691,-37.9126,-0.14,-10.8839,0.0956,ja
-Imputation je Feature,kumulativ,12,0.8774,0.7146,0.8652,0.5977,1.3465,0.0537,-37.5414,0.0606,4.712,-0.1198,nein
-Imputation Nachbarstunden + Median,isoliert,14,1.3847,0.3221,1.3894,0.0899,1.2847,0.1725,0.3036,-0.0013,-0.0992,-0.0009,-
-Windrichtung sin/cos,kumulativ,13,0.88,0.7162,0.8415,0.6257,1.1182,0.3097,-39.2532,-0.1678,-13.0483,0.1363,ja
-Windrichtung sin/cos,isoliert,15,1.3798,0.3315,1.3153,0.1722,1.2685,0.1737,-5.0476,-0.0174,-1.3553,0.0003,-
-Interaktion Lowcost x Feuchte,kumulativ,14,0.882,0.7224,0.7627,0.702,1.1391,0.2711,-44.9415,-0.1469,-11.4211,0.0977,nein
-Interaktion Lowcost x Feuchte,isoliert,15,1.1843,0.4754,1.2664,0.2842,7.9175,-621.0535,-8.5787,6.6316,515.6934,-621.2269,-
-StandardScaler,kumulativ,13,0.88,0.7162,0.8415,0.6257,1.1182,0.3097,-39.2532,-0.1678,-13.0483,0.1363,ja
-StandardScaler,isoliert,14,1.3849,0.3228,1.3852,0.0976,1.286,0.1734,-0.0,-0.0,-0.0,0.0,-
-ohne glob_rad,kumulativ,12,0.8998,0.707,0.8971,0.5787,1.0824,0.3592,-35.2338,-0.2036,-15.829,0.1857,ja
-ohne glob_rad,isoliert,13,1.3963,0.3095,1.2368,0.2482,1.3132,0.1506,-10.7131,0.0273,2.1204,-0.0228,-
-ohne rain_per_hour,kumulativ,11,0.908,0.7035,0.9012,0.5766,1.0782,0.3677,-34.9393,-0.2077,-16.1518,0.1942,ja
-ohne rain_per_hour,isoliert,13,1.3851,0.3171,1.2215,0.265,1.2828,0.1684,-11.8199,-0.0032,-0.2478,-0.005,-
-ohne black_carbon,kumulativ,10,1.023,0.6489,0.8619,0.6068,1.3157,0.0693,-37.7787,0.0297,2.3113,-0.1042,nein
-ohne black_carbon,isoliert,13,1.4344,0.2747,1.2736,0.1762,1.3265,0.1716,-8.0589,0.0405,3.152,-0.0019,-
-ohne no2,kumulativ,10,0.9199,0.6995,0.8684,0.6076,1.0754,0.3541,-37.3123,-0.2105,-16.3728,0.1806,ja
-ohne no2,isoliert,13,1.3888,0.3002,1.1645,0.3295,1.2898,0.1217,-15.9317,0.0039,0.3023,-0.0517,-
+Modell,Art,Features,MAE_Train,R2_Train,MAE_Val,R2_Val,dMAE_Val_abs,dMAE_Val_%,dR2_Val_abs,Übernommen
+Baseline,Baseline,14,1.3849,0.3228,1.3852,0.0976,0.0,0.0,0.0,-
+Negativwerte auf 0,kumulativ,14,1.3844,0.3232,1.3865,0.0961,0.0013,0.0942,-0.0015,ja
+Negativwerte auf 0,isoliert,14,1.3844,0.3232,1.3865,0.0961,0.0013,0.0942,-0.0015,-
+Regen pro Stunde,kumulativ,14,1.3852,0.3172,1.2223,0.2647,-0.163,-11.7637,0.1671,ja
+Regen pro Stunde,isoliert,14,1.3857,0.3168,1.222,0.2649,-0.1632,-11.7839,0.1673,-
+Ausreißer Mittelwert | keine Transformation | co2/o3 behalten,kumulativ,14,0.9119,0.6459,1.1498,0.3106,-0.2354,-16.9966,0.213,nein
+Ausreißer Mittelwert | log(1+x) | co2/o3 behalten,kumulativ,14,0.8769,0.6628,1.141,0.3362,-0.2442,-17.6294,0.2386,nein
+Ausreißer Mittelwert | PowerTransformer | co2/o3 behalten,kumulativ,14,0.8478,0.6881,1.2951,0.1846,-0.0901,-6.5025,0.0871,nein
+Ausreißer Median | keine Transformation | co2/o3 behalten,kumulativ,14,1.0061,0.5531,1.2875,0.1716,-0.0977,-7.0565,0.074,nein
+Ausreißer Median | log(1+x) | co2/o3 behalten,kumulativ,14,0.9663,0.5891,1.2563,0.3106,-0.129,-9.3097,0.213,nein
+Ausreißer Median | PowerTransformer | co2/o3 behalten,kumulativ,14,0.9364,0.6155,1.4144,0.1573,0.0292,2.1078,0.0597,nein
+Ausreißer Nachbarstunden | keine Transformation | co2/o3 behalten,kumulativ,14,0.8763,0.6714,1.232,0.1554,-0.1532,-11.0601,0.0578,nein
+Ausreißer Nachbarstunden | log(1+x) | co2/o3 behalten,kumulativ,14,0.8432,0.6865,1.2368,0.2186,-0.1485,-10.7169,0.121,nein
+Ausreißer Nachbarstunden | PowerTransformer | co2/o3 behalten,kumulativ,14,0.8114,0.7136,1.4067,0.0674,0.0214,1.5484,-0.0302,nein
+Ausreißer IQR-Grenze | keine Transformation | co2/o3 behalten,kumulativ,14,0.8406,0.7191,1.1568,0.2403,-0.2284,-16.486,0.1427,nein
+Ausreißer IQR-Grenze | log(1+x) | co2/o3 behalten,kumulativ,14,0.8462,0.7285,1.1985,0.3138,-0.1867,-13.4772,0.2163,nein
+Ausreißer IQR-Grenze | PowerTransformer | co2/o3 behalten,kumulativ,14,0.8331,0.7358,1.3481,0.189,-0.0372,-2.6825,0.0914,nein
+Ausreißer 5./95. Perzentil | keine Transformation | co2/o3 behalten,kumulativ,14,0.8453,0.7122,1.171,0.1934,-0.2142,-15.4646,0.0958,nein
+Ausreißer 5./95. Perzentil | log(1+x) | co2/o3 behalten,kumulativ,14,0.8423,0.7303,1.2102,0.2922,-0.175,-12.631,0.1946,nein
+Ausreißer 5./95. Perzentil | PowerTransformer | co2/o3 behalten,kumulativ,14,0.8333,0.7359,1.3583,0.1759,-0.0269,-1.9392,0.0783,nein
+Ausreißer Winsorizing | keine Transformation | co2/o3 behalten,kumulativ,14,0.847,0.7117,1.1837,0.184,-0.2016,-14.5509,0.0864,nein
+Ausreißer Winsorizing | log(1+x) | co2/o3 behalten,kumulativ,14,0.8379,0.733,1.224,0.2773,-0.1612,-11.6387,0.1797,nein
+Ausreißer Winsorizing | PowerTransformer | co2/o3 behalten,kumulativ,14,0.8367,0.7359,1.3594,0.1748,-0.0258,-1.8621,0.0772,nein
+Ausreißer 5./95. Perzentil (alle Schadstoffe) | keine Transformation | co2/o3 behalten,kumulativ,14,0.7894,0.757,1.3842,-0.055,-0.001,-0.071,-0.1526,nein
+Ausreißer 5./95. Perzentil (alle Schadstoffe) | log(1+x) | co2/o3 behalten,kumulativ,14,0.802,0.7557,1.3901,0.0914,0.0049,0.3505,-0.0062,nein
+Ausreißer 5./95. Perzentil (alle Schadstoffe) | PowerTransformer | co2/o3 behalten,kumulativ,14,0.8389,0.7336,1.3716,0.1615,-0.0136,-0.9839,0.0639,nein
+Ausreißer Mittelwert | keine Transformation | co2/o3 entfernt,kumulativ,12,0.9727,0.6203,1.0096,0.449,-0.3756,-27.1165,0.3514,nein
+Ausreißer Mittelwert | log(1+x) | co2/o3 entfernt,kumulativ,12,0.9104,0.6478,0.9951,0.5072,-0.3901,-28.1619,0.4096,nein
+Ausreißer Mittelwert | PowerTransformer | co2/o3 entfernt,kumulativ,12,0.8739,0.6787,1.2036,0.3209,-0.1816,-13.1099,0.2233,nein
+Ausreißer Median | keine Transformation | co2/o3 entfernt,kumulativ,12,1.0617,0.5279,1.2097,0.2214,-0.1755,-12.6714,0.1238,nein
+Ausreißer Median | log(1+x) | co2/o3 entfernt,kumulativ,12,1.0086,0.5711,1.1101,0.4493,-0.2751,-19.862,0.3517,nein
+Ausreißer Median | PowerTransformer | co2/o3 entfernt,kumulativ,12,0.9675,0.6044,1.3491,0.261,-0.0361,-2.6038,0.1634,nein
+Ausreißer Nachbarstunden | keine Transformation | co2/o3 entfernt,kumulativ,12,0.9393,0.6459,1.0717,0.2853,-0.3135,-22.632,0.1877,nein
+Ausreißer Nachbarstunden | log(1+x) | co2/o3 entfernt,kumulativ,12,0.8768,0.6722,1.0698,0.3767,-0.3154,-22.7666,0.2791,nein
+Ausreißer Nachbarstunden | PowerTransformer | co2/o3 entfernt,kumulativ,12,0.8374,0.7043,1.3041,0.2064,-0.0811,-5.8566,0.1088,nein
+Ausreißer IQR-Grenze | keine Transformation | co2/o3 entfernt,kumulativ,12,0.9087,0.6909,0.9163,0.4873,-0.4689,-33.8525,0.3897,nein
+Ausreißer IQR-Grenze | log(1+x) | co2/o3 entfernt,kumulativ,12,0.8895,0.7082,0.8464,0.626,-0.5388,-38.8944,0.5284,ja
+Ausreißer IQR-Grenze | PowerTransformer | co2/o3 entfernt,kumulativ,12,0.8688,0.7216,1.1497,0.407,-0.2355,-17.0012,0.3094,nein
+Ausreißer 5./95. Perzentil | keine Transformation | co2/o3 entfernt,kumulativ,12,0.9124,0.6834,0.946,0.4374,-0.4392,-31.7099,0.3398,nein
+Ausreißer 5./95. Perzentil | log(1+x) | co2/o3 entfernt,kumulativ,12,0.8852,0.7104,0.8549,0.6091,-0.5303,-38.2831,0.5115,nein
+Ausreißer 5./95. Perzentil | PowerTransformer | co2/o3 entfernt,kumulativ,12,0.8688,0.7216,1.1583,0.397,-0.2269,-16.3788,0.2994,nein
+Ausreißer Winsorizing | keine Transformation | co2/o3 entfernt,kumulativ,12,0.9137,0.6828,0.9559,0.4311,-0.4293,-30.9892,0.3335,nein
+Ausreißer Winsorizing | log(1+x) | co2/o3 entfernt,kumulativ,12,0.8796,0.7129,0.8652,0.6012,-0.5201,-37.5431,0.5036,nein
+Ausreißer Winsorizing | PowerTransformer | co2/o3 entfernt,kumulativ,12,0.8724,0.7209,1.1515,0.4026,-0.2337,-16.8719,0.305,nein
+Ausreißer 5./95. Perzentil (alle Schadstoffe) | keine Transformation | co2/o3 entfernt,kumulativ,12,0.8245,0.7446,1.2241,0.1747,-0.1611,-11.6318,0.0771,nein
+Ausreißer 5./95. Perzentil (alle Schadstoffe) | log(1+x) | co2/o3 entfernt,kumulativ,12,0.8376,0.7408,1.1303,0.381,-0.2549,-18.3991,0.2834,nein
+Ausreißer 5./95. Perzentil (alle Schadstoffe) | PowerTransformer | co2/o3 entfernt,kumulativ,12,0.878,0.7159,1.1168,0.4334,-0.2684,-19.3761,0.3358,nein
+Ausreißer IQR-Grenze,isoliert,14,0.8406,0.7191,1.1568,0.2403,-0.2284,-16.486,0.1427,-
+log(1+x),isoliert,14,0.8496,0.6628,1.1988,-0.2173,-0.1864,-13.4554,-0.3149,-
+co2/o3 entfernt,isoliert,12,1.426,0.2777,1.2507,0.2584,-0.1345,-9.7069,0.1608,-
+Imputation nur Median,kumulativ,12,0.8895,0.7082,0.8464,0.626,-0.5388,-38.8944,0.5284,ja
+Imputation Nachbarstunden + Median,kumulativ,12,0.8843,0.7109,0.8503,0.6233,-0.535,-38.6193,0.5257,nein
+Imputation je Feature,kumulativ,12,0.8816,0.7125,0.856,0.6148,-0.5292,-38.2022,0.5172,nein
+Imputation nur Median,isoliert,14,1.3849,0.3228,1.3852,0.0976,0.0,0.0,0.0,-
+Windrichtung sin/cos,kumulativ,13,0.8891,0.7117,0.8297,0.6435,-0.5555,-40.1025,0.5459,ja
+Windrichtung sin/cos,isoliert,15,1.3798,0.3315,1.3153,0.1722,-0.0699,-5.0476,0.0746,-
+Interaktion Lowcost x Feuchte,kumulativ,14,0.8909,0.7169,0.7644,0.7064,-0.6208,-44.8188,0.6088,ja
+Interaktion Lowcost x Feuchte,isoliert,15,1.1843,0.4754,1.2664,0.2842,-0.1188,-8.5787,0.1866,-
+StandardScaler,kumulativ,14,0.8909,0.7169,0.7644,0.7064,-0.6208,-44.8188,0.6088,ja
+StandardScaler,isoliert,14,1.3849,0.3228,1.3852,0.0976,-0.0,-0.0,0.0,-
+ohne glob_rad,kumulativ,13,0.9084,0.7081,0.8159,0.6694,-0.5693,-41.1003,0.5718,nein
+ohne glob_rad,isoliert,13,1.3963,0.3095,1.2368,0.2482,-0.1484,-10.7131,0.1506,-
+ohne rain_per_hour,kumulativ,13,0.9028,0.7131,0.7674,0.7047,-0.6179,-44.6035,0.6071,nein
+ohne rain_per_hour,isoliert,13,1.3851,0.3171,1.2215,0.265,-0.1637,-11.8199,0.1674,-
+ohne lowcost_x_humidity,kumulativ,13,0.8891,0.7117,0.8297,0.6435,-0.5555,-40.1025,0.5459,nein
+ohne no2,kumulativ,13,0.9,0.7138,0.7489,0.7168,-0.6363,-45.9372,0.6192,ja
+ohne no2,isoliert,13,1.3888,0.3002,1.1645,0.3295,-0.2207,-15.9317,0.2319,-

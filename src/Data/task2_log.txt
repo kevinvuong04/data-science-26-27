@@ -1,80 +1,85 @@
-Modell | Art | Beschreibung | Features | MAE Train | MAE Val | MAE Val maskiert | R2 Train | R2 Val | R2 Val maskiert | dMAE maskiert vs. Baseline
-Baseline | Baseline | Originaldaten, 14 numerische Features, NaN mit Trainings-Median | 14 | 1.3849 | 1.3852 | 1.2860 | 0.3228 | 0.0976 | 0.1734 | +0.0000
+Modell | Art | Beschreibung | Features | MAE Train | MAE Val | R2 Train | R2 Val | dMAE Val vs. Baseline
+Baseline | Baseline | Originaldaten, 14 numerische Features, NaN mit Trainings-Median | 14 | 1.3849 | 1.3852 | 0.3228 | 0.0976 | +0.0000
 Baseline zufälliger Split | Vergleich | wie Baseline, aber zufälliger Split aus Aufgabe 1 | 14 | - | 1.3417 | - | - | 0.3590 | - | -
-Negativwerte auf 0 | kumulativ | negative Konzentrationen auf 0 gesetzt | 14 | 1.3844 | 1.3865 | 1.2862 | 0.3232 | 0.0961 | 0.1732 | +0.0002
-Negativwerte auf 0 | isoliert | negative Konzentrationen auf 0 gesetzt | 14 | 1.3844 | 1.3865 | 1.2862 | 0.3232 | 0.0961 | 0.1732 | +0.0002
+Negativwerte auf 0 | kumulativ | negative Konzentrationen auf 0 gesetzt | 14 | 1.3844 | 1.3865 | 0.3232 | 0.0961 | +0.0013
+Negativwerte auf 0 | isoliert | negative Konzentrationen auf 0 gesetzt | 14 | 1.3844 | 1.3865 | 0.3232 | 0.0961 | +0.0013
 ENTSCHEIDUNG Negativwerte auf 0: ja (Plausibilitätskorrektur, negative Konzentrationen sind unmöglich)
-Regen pro Stunde | kumulativ | rain_vol (Zählerstand) durch rain_per_hour ersetzt | 14 | 1.3852 | 1.2223 | 1.2826 | 0.3172 | 0.2647 | 0.1681 | -0.0033
-Regen pro Stunde | isoliert | rain_vol (Zählerstand) durch rain_per_hour ersetzt | 14 | 1.3857 | 1.2220 | 1.2826 | 0.3168 | 0.2649 | 0.1681 | -0.0034
+Regen pro Stunde | kumulativ | rain_vol (Zählerstand) durch rain_per_hour ersetzt | 14 | 1.3852 | 1.2223 | 0.3172 | 0.2647 | -0.1630
+Regen pro Stunde | isoliert | rain_vol (Zählerstand) durch rain_per_hour ersetzt | 14 | 1.3857 | 1.2220 | 0.3168 | 0.2649 | -0.1632
 ENTSCHEIDUNG Regen pro Stunde: ja (regelbasierte Korrektur, der Zählerstand ist keine Regenmenge)
-Ausreißer Mittelwert | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Mittelwert ersetzt; keine Transformation | 14 | 0.9119 | 1.1498 | 1.1996 | 0.6459 | 0.3106 | 0.2124 | -0.0863
-Ausreißer Mittelwert | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Mittelwert ersetzt; log(1+x) auf ['no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8769 | 1.1410 | 1.2249 | 0.6628 | 0.3362 | 0.2027 | -0.0611
-Ausreißer Mittelwert | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Mittelwert ersetzt; PowerTransformer auf ['no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8478 | 1.2951 | 1.3156 | 0.6881 | 0.1846 | 0.1443 | +0.0297
-Ausreißer Median | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Median ersetzt; keine Transformation | 14 | 1.0061 | 1.2875 | 1.2845 | 0.5531 | 0.1716 | 0.0994 | -0.0015
-Ausreißer Median | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Median ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.9663 | 1.2563 | 1.2239 | 0.5891 | 0.3106 | 0.2283 | -0.0620
-Ausreißer Median | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Median ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.9364 | 1.4144 | 1.3121 | 0.6155 | 0.1573 | 0.1981 | +0.0262
-Ausreißer Nachbarstunden | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; keine Transformation | 14 | 0.8763 | 1.2320 | 1.3092 | 0.6714 | 0.1554 | -0.0036 | +0.0232
-Ausreißer Nachbarstunden | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; log(1+x) auf ['no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8432 | 1.2368 | 1.3452 | 0.6865 | 0.2186 | -0.0074 | +0.0593
-Ausreißer Nachbarstunden | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; PowerTransformer auf ['no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8114 | 1.4067 | 1.4400 | 0.7136 | 0.0674 | -0.0526 | +0.1540
-Ausreißer 5./95. Perzentil | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch 5./95. Perzentil ersetzt; keine Transformation | 14 | 0.8453 | 1.1710 | 1.2897 | 0.7122 | 0.1934 | -0.0323 | +0.0037
-Ausreißer 5./95. Perzentil | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch 5./95. Perzentil ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8423 | 1.2102 | 1.2940 | 0.7303 | 0.2922 | 0.1312 | +0.0080
-Ausreißer 5./95. Perzentil | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch 5./95. Perzentil ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8333 | 1.3583 | 1.3527 | 0.7359 | 0.1759 | 0.1153 | +0.0668
-Ausreißer Winsorizing | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Winsorizing ersetzt; keine Transformation | 14 | 0.8470 | 1.1837 | 1.2978 | 0.7117 | 0.1840 | -0.0413 | +0.0118
-Ausreißer Winsorizing | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Winsorizing ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8379 | 1.2240 | 1.3096 | 0.7330 | 0.2773 | 0.1111 | +0.0236
-Ausreißer Winsorizing | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Winsorizing ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8367 | 1.3594 | 1.3495 | 0.7359 | 0.1748 | 0.1238 | +0.0635
-Ausreißer 5./95. Perzentil (alle Schadstoffe) | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'co2'] durch 5./95. Perzentil ersetzt; keine Transformation | 14 | 0.7894 | 1.3842 | 1.3593 | 0.7570 | -0.0550 | 0.0047 | +0.0733
-Ausreißer 5./95. Perzentil (alle Schadstoffe) | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'co2'] durch 5./95. Perzentil ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'black_carbon', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8020 | 1.3901 | 1.3629 | 0.7557 | 0.0914 | 0.0634 | +0.0770
-Ausreißer 5./95. Perzentil (alle Schadstoffe) | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'co2'] durch 5./95. Perzentil ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'black_carbon', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8389 | 1.3716 | 1.3893 | 0.7336 | 0.1615 | 0.0645 | +0.1033
-Ausreißer Mittelwert | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Mittelwert ersetzt; keine Transformation | 12 | 0.9727 | 1.0096 | 1.2185 | 0.6203 | 0.4490 | 0.2081 | -0.0675
-Ausreißer Mittelwert | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Mittelwert ersetzt; log(1+x) auf ['no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.9104 | 0.9951 | 1.2213 | 0.6478 | 0.5072 | 0.2310 | -0.0646
-Ausreißer Mittelwert | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Mittelwert ersetzt; PowerTransformer auf ['no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8739 | 1.2036 | 1.3326 | 0.6787 | 0.3209 | 0.1599 | +0.0466
-Ausreißer Median | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Median ersetzt; keine Transformation | 12 | 1.0617 | 1.2097 | 1.3262 | 0.5279 | 0.2214 | 0.0524 | +0.0402
-Ausreißer Median | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Median ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 1.0086 | 1.1101 | 1.2348 | 0.5711 | 0.4493 | 0.1936 | -0.0511
-Ausreißer Median | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Median ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.9675 | 1.3491 | 1.3437 | 0.6044 | 0.2610 | 0.1664 | +0.0577
-Ausreißer Nachbarstunden | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; keine Transformation | 12 | 0.9393 | 1.0717 | 1.2947 | 0.6459 | 0.2853 | -0.0044 | +0.0087
-Ausreißer Nachbarstunden | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; log(1+x) auf ['no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8768 | 1.0698 | 1.3042 | 0.6722 | 0.3767 | 0.0263 | +0.0183
-Ausreißer Nachbarstunden | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; PowerTransformer auf ['no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8374 | 1.3041 | 1.4299 | 0.7043 | 0.2064 | -0.0255 | +0.1440
-Ausreißer 5./95. Perzentil | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch 5./95. Perzentil ersetzt; keine Transformation | 12 | 0.9124 | 0.9460 | 1.2532 | 0.6834 | 0.4374 | -0.0285 | -0.0328
-Ausreißer 5./95. Perzentil | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch 5./95. Perzentil ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8852 | 0.8549 | 1.1509 | 0.7104 | 0.6091 | 0.2568 | -0.1350
-Ausreißer 5./95. Perzentil | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch 5./95. Perzentil ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8688 | 1.1583 | 1.2960 | 0.7216 | 0.3970 | 0.1753 | +0.0100
-Ausreißer Winsorizing | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Winsorizing ersetzt; keine Transformation | 12 | 0.9137 | 0.9559 | 1.2610 | 0.6828 | 0.4311 | -0.0363 | -0.0249
-Ausreißer Winsorizing | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Winsorizing ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8796 | 0.8652 | 1.1653 | 0.7129 | 0.6012 | 0.2414 | -0.1206
-Ausreißer Winsorizing | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Winsorizing ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8724 | 1.1515 | 1.2916 | 0.7209 | 0.4026 | 0.1846 | +0.0056
-Ausreißer 5./95. Perzentil (alle Schadstoffe) | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp'] durch 5./95. Perzentil ersetzt; keine Transformation | 12 | 0.8245 | 1.2241 | 1.3610 | 0.7446 | 0.1747 | 0.0427 | +0.0750
-Ausreißer 5./95. Perzentil (alle Schadstoffe) | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp'] durch 5./95. Perzentil ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'black_carbon', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8376 | 1.1303 | 1.3051 | 0.7408 | 0.3810 | 0.1501 | +0.0191
-Ausreißer 5./95. Perzentil (alle Schadstoffe) | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp'] durch 5./95. Perzentil ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'black_carbon', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8780 | 1.1168 | 1.3036 | 0.7159 | 0.4334 | 0.1514 | +0.0177
-Ausreißer 5./95. Perzentil | isoliert | nur diese Ausreißerbehandlung | 14 | 0.8453 | 1.1710 | 1.2897 | 0.7122 | 0.1934 | -0.0323 | +0.0037
-log(1+x) | isoliert | nur diese Transformation | 14 | 0.8496 | 1.1988 | 1.3291 | 0.6628 | -0.2173 | -0.4545 | +0.0431
-co2/o3 entfernt | isoliert | nur Feature Deletion co2 und o3 | 12 | 1.4260 | 1.2507 | 1.3990 | 0.2777 | 0.2584 | 0.0870 | +0.1131
-ENTSCHEIDUNG Ausreißer 5./95. Perzentil | log(1+x) | co2/o3 entfernt: ja (niedrigster MAE der maskierten Validierung von 36 Kombinationen)
-ENTSCHEIDUNG übrige 35 Kombinationen: nein (höherer MAE der maskierten Validierung)
-Imputation nur Median | kumulativ | alle Lücken mit Trainings-Median | 12 | 0.8852 | 0.8549 | 1.1509 | 0.7104 | 0.6091 | 0.2568 | -0.1350
-Imputation Nachbarstunden + Median | kumulativ | kurze Lücken Nachbarstunden, Rest Median | 12 | 0.8801 | 0.8600 | 1.1460 | 0.7130 | 0.6061 | 0.2691 | -0.1400
-Imputation je Feature | kumulativ | Nachbarstunden, Regression für ['no', 'no2', 'black_carbon', 'ufp'], Rest Median | 12 | 0.8774 | 0.8652 | 1.3465 | 0.7146 | 0.5977 | 0.0537 | +0.0606
-Imputation Nachbarstunden + Median | isoliert | nur diese Imputation | 14 | 1.3847 | 1.3894 | 1.2847 | 0.3221 | 0.0899 | 0.1725 | -0.0013
-ENTSCHEIDUNG Imputation Nachbarstunden + Median: ja (niedrigster MAE der maskierten Validierung)
-ENTSCHEIDUNG Imputation nur Median: nein (höherer MAE (maskiert) als Imputation Nachbarstunden + Median)
-ENTSCHEIDUNG Imputation je Feature: nein (höherer MAE (maskiert) als Imputation Nachbarstunden + Median)
-Windrichtung sin/cos | kumulativ | wind_direction durch wind_sin und wind_cos ersetzt | 13 | 0.8800 | 0.8415 | 1.1182 | 0.7162 | 0.6257 | 0.3097 | -0.1678
-Windrichtung sin/cos | isoliert | wind_direction durch wind_sin und wind_cos ersetzt | 15 | 1.3798 | 1.3153 | 1.2685 | 0.3315 | 0.1722 | 0.1737 | -0.0174
-ENTSCHEIDUNG Windrichtung sin/cos: ja (MAE (maskiert) sinkt)
-Interaktion Lowcost x Feuchte | kumulativ | neues Feature lowcost_x_humidity | 14 | 0.8820 | 0.7627 | 1.1391 | 0.7224 | 0.7020 | 0.2711 | -0.1469
-Interaktion Lowcost x Feuchte | isoliert | neues Feature lowcost_x_humidity | 15 | 1.1843 | 1.2664 | 7.9175 | 0.4754 | 0.2842 | -621.0535 | +6.6316
-ENTSCHEIDUNG Interaktion Lowcost x Feuchte: nein (MAE (maskiert) steigt)
-StandardScaler | kumulativ | StandardScaler auf allen Features | 13 | 0.8800 | 0.8415 | 1.1182 | 0.7162 | 0.6257 | 0.3097 | -0.1678
-StandardScaler | isoliert | StandardScaler auf allen Features | 14 | 1.3849 | 1.3852 | 1.2860 | 0.3228 | 0.0976 | 0.1734 | -0.0000
+Ausreißer Mittelwert | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Mittelwert ersetzt; keine Transformation | 14 | 0.9119 | 1.1498 | 0.6459 | 0.3106 | -0.2354
+Ausreißer Mittelwert | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Mittelwert ersetzt; log(1+x) auf ['no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8769 | 1.1410 | 0.6628 | 0.3362 | -0.2442
+Ausreißer Mittelwert | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Mittelwert ersetzt; PowerTransformer auf ['no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8478 | 1.2951 | 0.6881 | 0.1846 | -0.0901
+Ausreißer Median | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Median ersetzt; keine Transformation | 14 | 1.0061 | 1.2875 | 0.5531 | 0.1716 | -0.0977
+Ausreißer Median | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Median ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.9663 | 1.2563 | 0.5891 | 0.3106 | -0.1290
+Ausreißer Median | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Median ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.9364 | 1.4144 | 0.6155 | 0.1573 | +0.0292
+Ausreißer Nachbarstunden | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; keine Transformation | 14 | 0.8763 | 1.2320 | 0.6714 | 0.1554 | -0.1532
+Ausreißer Nachbarstunden | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; log(1+x) auf ['no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8432 | 1.2368 | 0.6865 | 0.2186 | -0.1485
+Ausreißer Nachbarstunden | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; PowerTransformer auf ['no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8114 | 1.4067 | 0.7136 | 0.0674 | +0.0214
+Ausreißer IQR-Grenze | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch IQR-Grenze ersetzt; keine Transformation | 14 | 0.8406 | 1.1568 | 0.7191 | 0.2403 | -0.2284
+Ausreißer IQR-Grenze | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch IQR-Grenze ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8462 | 1.1985 | 0.7285 | 0.3138 | -0.1867
+Ausreißer IQR-Grenze | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch IQR-Grenze ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8331 | 1.3481 | 0.7358 | 0.1890 | -0.0372
+Ausreißer 5./95. Perzentil | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch 5./95. Perzentil ersetzt; keine Transformation | 14 | 0.8453 | 1.1710 | 0.7122 | 0.1934 | -0.2142
+Ausreißer 5./95. Perzentil | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch 5./95. Perzentil ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8423 | 1.2102 | 0.7303 | 0.2922 | -0.1750
+Ausreißer 5./95. Perzentil | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch 5./95. Perzentil ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8333 | 1.3583 | 0.7359 | 0.1759 | -0.0269
+Ausreißer Winsorizing | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Winsorizing ersetzt; keine Transformation | 14 | 0.8470 | 1.1837 | 0.7117 | 0.1840 | -0.2016
+Ausreißer Winsorizing | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Winsorizing ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8379 | 1.2240 | 0.7330 | 0.2773 | -0.1612
+Ausreißer Winsorizing | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Winsorizing ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8367 | 1.3594 | 0.7359 | 0.1748 | -0.0258
+Ausreißer 5./95. Perzentil (alle Schadstoffe) | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'co2'] durch 5./95. Perzentil ersetzt; keine Transformation | 14 | 0.7894 | 1.3842 | 0.7570 | -0.0550 | -0.0010
+Ausreißer 5./95. Perzentil (alle Schadstoffe) | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'co2'] durch 5./95. Perzentil ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'black_carbon', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8020 | 1.3901 | 0.7557 | 0.0914 | +0.0049
+Ausreißer 5./95. Perzentil (alle Schadstoffe) | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'co2'] durch 5./95. Perzentil ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'black_carbon', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8389 | 1.3716 | 0.7336 | 0.1615 | -0.0136
+Ausreißer Mittelwert | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Mittelwert ersetzt; keine Transformation | 12 | 0.9727 | 1.0096 | 0.6203 | 0.4490 | -0.3756
+Ausreißer Mittelwert | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Mittelwert ersetzt; log(1+x) auf ['no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.9104 | 0.9951 | 0.6478 | 0.5072 | -0.3901
+Ausreißer Mittelwert | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Mittelwert ersetzt; PowerTransformer auf ['no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8739 | 1.2036 | 0.6787 | 0.3209 | -0.1816
+Ausreißer Median | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Median ersetzt; keine Transformation | 12 | 1.0617 | 1.2097 | 0.5279 | 0.2214 | -0.1755
+Ausreißer Median | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Median ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 1.0086 | 1.1101 | 0.5711 | 0.4493 | -0.2751
+Ausreißer Median | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Median ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.9675 | 1.3491 | 0.6044 | 0.2610 | -0.0361
+Ausreißer Nachbarstunden | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; keine Transformation | 12 | 0.9393 | 1.0717 | 0.6459 | 0.2853 | -0.3135
+Ausreißer Nachbarstunden | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; log(1+x) auf ['no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8768 | 1.0698 | 0.6722 | 0.3767 | -0.3154
+Ausreißer Nachbarstunden | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; PowerTransformer auf ['no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8374 | 1.3041 | 0.7043 | 0.2064 | -0.0811
+Ausreißer IQR-Grenze | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch IQR-Grenze ersetzt; keine Transformation | 12 | 0.9087 | 0.9163 | 0.6909 | 0.4873 | -0.4689
+Ausreißer IQR-Grenze | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch IQR-Grenze ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8895 | 0.8464 | 0.7082 | 0.6260 | -0.5388
+Ausreißer IQR-Grenze | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch IQR-Grenze ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8688 | 1.1497 | 0.7216 | 0.4070 | -0.2355
+Ausreißer 5./95. Perzentil | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch 5./95. Perzentil ersetzt; keine Transformation | 12 | 0.9124 | 0.9460 | 0.6834 | 0.4374 | -0.4392
+Ausreißer 5./95. Perzentil | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch 5./95. Perzentil ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8852 | 0.8549 | 0.7104 | 0.6091 | -0.5303
+Ausreißer 5./95. Perzentil | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch 5./95. Perzentil ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8688 | 1.1583 | 0.7216 | 0.3970 | -0.2269
+Ausreißer Winsorizing | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Winsorizing ersetzt; keine Transformation | 12 | 0.9137 | 0.9559 | 0.6828 | 0.4311 | -0.4293
+Ausreißer Winsorizing | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Winsorizing ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8796 | 0.8652 | 0.7129 | 0.6012 | -0.5201
+Ausreißer Winsorizing | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Winsorizing ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8724 | 1.1515 | 0.7209 | 0.4026 | -0.2337
+Ausreißer 5./95. Perzentil (alle Schadstoffe) | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp'] durch 5./95. Perzentil ersetzt; keine Transformation | 12 | 0.8245 | 1.2241 | 0.7446 | 0.1747 | -0.1611
+Ausreißer 5./95. Perzentil (alle Schadstoffe) | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp'] durch 5./95. Perzentil ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'black_carbon', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8376 | 1.1303 | 0.7408 | 0.3810 | -0.2549
+Ausreißer 5./95. Perzentil (alle Schadstoffe) | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp'] durch 5./95. Perzentil ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'black_carbon', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8780 | 1.1168 | 0.7159 | 0.4334 | -0.2684
+Ausreißer IQR-Grenze | isoliert | nur diese Ausreißerbehandlung | 14 | 0.8406 | 1.1568 | 0.7191 | 0.2403 | -0.2284
+log(1+x) | isoliert | nur diese Transformation | 14 | 0.8496 | 1.1988 | 0.6628 | -0.2173 | -0.1864
+co2/o3 entfernt | isoliert | nur Feature Deletion co2 und o3 | 12 | 1.4260 | 1.2507 | 0.2777 | 0.2584 | -0.1345
+ENTSCHEIDUNG Ausreißer IQR-Grenze | log(1+x) | co2/o3 entfernt: ja (niedrigster MAE der Validierung von 42 Kombinationen)
+ENTSCHEIDUNG übrige 41 Kombinationen: nein (höherer MAE der Validierung)
+Imputation nur Median | kumulativ | alle Lücken mit Trainings-Median | 12 | 0.8895 | 0.8464 | 0.7082 | 0.6260 | -0.5388
+Imputation Nachbarstunden + Median | kumulativ | kurze Lücken Nachbarstunden, Rest Median | 12 | 0.8843 | 0.8503 | 0.7109 | 0.6233 | -0.5350
+Imputation je Feature | kumulativ | Nachbarstunden, Regression für ['no', 'no2', 'black_carbon', 'ufp'], Rest Median | 12 | 0.8816 | 0.8560 | 0.7125 | 0.6148 | -0.5292
+Imputation nur Median | isoliert | nur diese Imputation | 14 | 1.3849 | 1.3852 | 0.3228 | 0.0976 | +0.0000
+ENTSCHEIDUNG Imputation nur Median: ja (niedrigster MAE der Validierung)
+ENTSCHEIDUNG Imputation Nachbarstunden + Median: nein (höherer MAE als Imputation nur Median)
+ENTSCHEIDUNG Imputation je Feature: nein (höherer MAE als Imputation nur Median)
+Windrichtung sin/cos | kumulativ | wind_direction durch wind_sin und wind_cos ersetzt | 13 | 0.8891 | 0.8297 | 0.7117 | 0.6435 | -0.5555
+Windrichtung sin/cos | isoliert | wind_direction durch wind_sin und wind_cos ersetzt | 15 | 1.3798 | 1.3153 | 0.3315 | 0.1722 | -0.0699
+ENTSCHEIDUNG Windrichtung sin/cos: ja (MAE sinkt)
+Interaktion Lowcost x Feuchte | kumulativ | neues Feature lowcost_x_humidity | 14 | 0.8909 | 0.7644 | 0.7169 | 0.7064 | -0.6208
+Interaktion Lowcost x Feuchte | isoliert | neues Feature lowcost_x_humidity | 15 | 1.1843 | 1.2664 | 0.4754 | 0.2842 | -0.1188
+ENTSCHEIDUNG Interaktion Lowcost x Feuchte: ja (MAE sinkt)
+StandardScaler | kumulativ | StandardScaler auf allen Features | 14 | 0.8909 | 0.7644 | 0.7169 | 0.7064 | -0.6208
+StandardScaler | isoliert | StandardScaler auf allen Features | 14 | 1.3849 | 1.3852 | 0.3228 | 0.0976 | -0.0000
 ENTSCHEIDUNG StandardScaler: ja (MAE unverändert, Koeffizienten vergleichbar, wichtig für Aufgabe 3)
-ohne glob_rad | kumulativ | glob_rad entfernt | 12 | 0.8998 | 0.8971 | 1.0824 | 0.7070 | 0.5787 | 0.3592 | -0.2036
-ohne glob_rad | isoliert | nur glob_rad entfernt | 13 | 1.3963 | 1.2368 | 1.3132 | 0.3095 | 0.2482 | 0.1506 | +0.0273
-ENTSCHEIDUNG ohne glob_rad: ja (MAE (maskiert) sinkt)
-ohne rain_per_hour | kumulativ | rain_per_hour entfernt | 11 | 0.9080 | 0.9012 | 1.0782 | 0.7035 | 0.5766 | 0.3677 | -0.2077
-ohne rain_per_hour | isoliert | nur rain_per_hour entfernt | 13 | 1.3851 | 1.2215 | 1.2828 | 0.3171 | 0.2650 | 0.1684 | -0.0032
-ENTSCHEIDUNG ohne rain_per_hour: ja (MAE (maskiert) sinkt)
-ohne black_carbon | kumulativ | black_carbon entfernt | 10 | 1.0230 | 0.8619 | 1.3157 | 0.6489 | 0.6068 | 0.0693 | +0.0297
-ohne black_carbon | isoliert | nur black_carbon entfernt | 13 | 1.4344 | 1.2736 | 1.3265 | 0.2747 | 0.1762 | 0.1716 | +0.0405
-ENTSCHEIDUNG ohne black_carbon: nein (MAE (maskiert) steigt)
-ohne no2 | kumulativ | no2 entfernt | 10 | 0.9199 | 0.8684 | 1.0754 | 0.6995 | 0.6076 | 0.3541 | -0.2105
-ohne no2 | isoliert | nur no2 entfernt | 13 | 1.3888 | 1.1645 | 1.2898 | 0.3002 | 0.3295 | 0.1217 | +0.0039
-ENTSCHEIDUNG ohne no2: ja (MAE (maskiert) sinkt)
+ohne glob_rad | kumulativ | glob_rad entfernt | 13 | 0.9084 | 0.8159 | 0.7081 | 0.6694 | -0.5693
+ohne glob_rad | isoliert | nur glob_rad entfernt | 13 | 1.3963 | 1.2368 | 0.3095 | 0.2482 | -0.1484
+ENTSCHEIDUNG ohne glob_rad: nein (MAE steigt)
+ohne rain_per_hour | kumulativ | rain_per_hour entfernt | 13 | 0.9028 | 0.7674 | 0.7131 | 0.7047 | -0.6179
+ohne rain_per_hour | isoliert | nur rain_per_hour entfernt | 13 | 1.3851 | 1.2215 | 0.3171 | 0.2650 | -0.1637
+ENTSCHEIDUNG ohne rain_per_hour: nein (MAE steigt)
+ohne lowcost_x_humidity | kumulativ | lowcost_x_humidity entfernt | 13 | 0.8891 | 0.8297 | 0.7117 | 0.6435 | -0.5555
+ENTSCHEIDUNG ohne lowcost_x_humidity: nein (MAE steigt)
+ohne no2 | kumulativ | no2 entfernt | 13 | 0.9000 | 0.7489 | 0.7138 | 0.7168 | -0.6363
+ohne no2 | isoliert | nur no2 entfernt | 13 | 1.3888 | 1.1645 | 0.3002 | 0.3295 | -0.2207
+ENTSCHEIDUNG ohne no2: ja (MAE sinkt)
 TEST Baseline | 1464 Zeilen, 1419 bewertet | MAE Test 2.2015 | R2 Test -0.1199
-TEST Finales Modell | 1464 Zeilen, 1419 bewertet | MAE Test 1.4677 | R2 Test 0.5274
+TEST Finales Modell | 1464 Zeilen, 1419 bewertet | MAE Test 1.5336 | R2 Test 0.4931
