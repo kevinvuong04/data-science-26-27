@@ -1,9 +1,32 @@
 Modell,Art,Features,MAE_Train,R2_Train,MAE_Val,R2_Val,dMAE_Val_abs,dMAE_Val_%,dR2_Val_abs,Übernommen
 Baseline,Baseline,14,1.3849,0.3228,1.3852,0.0976,0.0,0.0,0.0,-
+Negativwerte auf 0,einzeln,14,1.3844,0.3232,1.3865,0.0961,0.0013,0.0942,-0.0015,-
+Regen pro Stunde,einzeln,14,1.3857,0.3168,1.222,0.2649,-0.1632,-11.7839,0.1673,-
+Ausreißer Mittelwert,einzeln,14,0.9143,0.6481,1.2805,0.1658,-0.1047,-7.5567,0.0682,-
+Ausreißer Median,einzeln,14,1.0045,0.5569,1.4745,0.0289,0.0893,6.4488,-0.0687,-
+Ausreißer IQR-Grenze,einzeln,14,0.8482,0.7185,1.2618,0.0936,-0.1234,-8.9095,-0.004,-
+Ausreißer 5./95. Perzentil,einzeln,14,0.8524,0.7116,1.2757,0.045,-0.1095,-7.9041,-0.0526,-
+Ausreißer Winsorizing,einzeln,14,0.8541,0.7111,1.2878,0.0337,-0.0974,-7.0336,-0.0639,-
+Ausreißer 5./95. Perzentil (alle Schadstoffe),einzeln,14,0.7977,0.7551,1.3802,-0.047,-0.005,-0.3639,-0.1446,-
+log(1+x),einzeln,14,0.8633,0.6593,1.2702,-0.2713,-0.115,-8.3014,-0.3689,-
+PowerTransformer,einzeln,14,0.8695,0.7116,1.4742,-0.0021,0.089,6.4216,-0.0997,-
+co2/o3 entfernt,einzeln,12,1.4309,0.281,1.3661,0.1623,-0.0191,-1.381,0.0647,-
+Listwise Deletion,einzeln,14,1.4366,0.3575,1.5119,-0.0541,0.1267,9.1468,-0.1517,-
+Imputation Median,einzeln,14,1.3849,0.3228,1.3852,0.0976,0.0,0.0,0.0,-
+Imputation Mittelwert,einzeln,14,1.3969,0.3163,1.3544,0.1274,-0.0308,-2.2235,0.0298,-
+Imputation Regression,einzeln,14,1.3659,0.3418,1.4334,0.0549,0.0482,3.476,-0.0427,-
+Imputation KNN,einzeln,14,1.3531,0.3482,1.3842,0.1316,-0.001,-0.071,0.034,-
+Windrichtung sin/cos,einzeln,15,1.3798,0.3315,1.3153,0.1722,-0.0699,-5.0476,0.0746,-
+Interaktion Lowcost x Feuchte,einzeln,15,1.1843,0.4754,1.2664,0.2842,-0.1188,-8.5787,0.1866,-
+StandardScaler,einzeln,14,1.3849,0.3228,1.3852,0.0976,-0.0,-0.0,0.0,-
+Feature Selection: Varianzfilter,einzeln,2,1.7121,0.0288,1.5313,0.0559,0.1461,10.5454,-0.0417,-
+Feature Selection: Top 5 Korrelation,einzeln,5,1.5658,0.1625,1.4203,0.1582,0.0351,2.5329,0.0606,-
+Feature Selection: Top 10 Korrelation,einzeln,10,1.4668,0.2311,1.2374,0.247,-0.1479,-10.6741,0.1494,-
+Feature Selection: VIF < 10,einzeln,14,1.3849,0.3228,1.3852,0.0976,0.0,0.0,0.0,-
+Feature Selection: Backward Elimination,einzeln,13,1.387,0.3225,1.3853,0.0938,0.0001,0.0082,-0.0038,-
+Feature Selection: Forward Selection,einzeln,8,1.4834,0.2271,1.0705,0.4762,-0.3147,-22.7195,0.3786,-
 Negativwerte auf 0,kumulativ,14,1.3844,0.3232,1.3865,0.0961,0.0013,0.0942,-0.0015,ja
-Negativwerte auf 0,isoliert,14,1.3844,0.3232,1.3865,0.0961,0.0013,0.0942,-0.0015,-
 Regen pro Stunde,kumulativ,14,1.3852,0.3172,1.2223,0.2647,-0.163,-11.7637,0.1671,ja
-Regen pro Stunde,isoliert,14,1.3857,0.3168,1.222,0.2649,-0.1632,-11.7839,0.1673,-
 Ausreißer Mittelwert | keine Transformation | co2/o3 behalten,kumulativ,14,0.9119,0.6459,1.1498,0.3106,-0.2354,-16.9966,0.213,nein
 Ausreißer Mittelwert | log(1+x) | co2/o3 behalten,kumulativ,14,0.8769,0.6628,1.141,0.3362,-0.2442,-17.6294,0.2386,nein
 Ausreißer Mittelwert | PowerTransformer | co2/o3 behalten,kumulativ,14,0.8478,0.6881,1.2951,0.1846,-0.0901,-6.5025,0.0871,nein
@@ -40,11 +63,7 @@ Ausreißer Winsorizing | PowerTransformer | co2/o3 entfernt,kumulativ,12,0.8724,
 Ausreißer 5./95. Perzentil (alle Schadstoffe) | keine Transformation | co2/o3 entfernt,kumulativ,12,0.8245,0.7446,1.2241,0.1747,-0.1611,-11.6318,0.0771,nein
 Ausreißer 5./95. Perzentil (alle Schadstoffe) | log(1+x) | co2/o3 entfernt,kumulativ,12,0.8376,0.7408,1.1303,0.381,-0.2549,-18.3991,0.2834,nein
 Ausreißer 5./95. Perzentil (alle Schadstoffe) | PowerTransformer | co2/o3 entfernt,kumulativ,12,0.878,0.7159,1.1168,0.4334,-0.2684,-19.3761,0.3358,nein
-Ausreißer IQR-Grenze,isoliert,14,0.8406,0.7191,1.1568,0.2403,-0.2284,-16.486,0.1427,-
-log(1+x),isoliert,14,0.8496,0.6628,1.1988,-0.2173,-0.1864,-13.4554,-0.3149,-
-co2/o3 entfernt,isoliert,12,1.426,0.2777,1.2507,0.2584,-0.1345,-9.7069,0.1608,-
 Listwise Deletion,kumulativ,12,0.8776,0.7394,0.9895,0.4988,-0.3957,-28.5667,0.4012,nein
-Listwise Deletion,isoliert,14,1.4366,0.3575,1.5119,-0.0541,0.1267,9.1468,-0.1517,-
 Imputation pm25_lowcost: Median,je Feature,12,0.8895,0.7082,0.8464,0.626,-0.5388,-38.8944,0.5284,-
 Imputation pm25_lowcost: Mittelwert,je Feature,12,0.8956,0.7043,0.8381,0.633,-0.5472,-39.5002,0.5354,-
 Imputation no: Median,je Feature,12,0.8895,0.7082,0.8464,0.626,-0.5388,-38.8944,0.5284,-
@@ -74,13 +93,9 @@ Imputation glob_rad: Mittelwert,je Feature,12,0.889,0.7084,0.85,0.6235,-0.5352,-
 Imputation rain_per_hour: Median,je Feature,12,0.8895,0.7082,0.8464,0.626,-0.5388,-38.8944,0.5284,-
 Imputation rain_per_hour: Mittelwert,je Feature,12,0.8892,0.7083,0.8478,0.6251,-0.5374,-38.7964,0.5275,-
 Imputation je Feature,kumulativ,12,0.898,0.7027,0.83,0.6391,-0.5552,-40.0828,0.5415,ja
-Imputation je Feature,isoliert,14,1.3969,0.3136,1.3714,0.1105,-0.0139,-1.0004,0.0129,-
 Windrichtung sin/cos,kumulativ,13,0.9016,0.7057,0.8076,0.6616,-0.5776,-41.6974,0.564,ja
-Windrichtung sin/cos,isoliert,15,1.3798,0.3315,1.3153,0.1722,-0.0699,-5.0476,0.0746,-
 Interaktion Lowcost x Feuchte,kumulativ,14,0.903,0.7083,0.7601,0.7071,-0.6251,-45.1257,0.6095,ja
-Interaktion Lowcost x Feuchte,isoliert,15,1.1843,0.4754,1.2664,0.2842,-0.1188,-8.5787,0.1866,-
 StandardScaler,kumulativ,14,0.903,0.7083,0.7601,0.7071,-0.6251,-45.1257,0.6095,ja
-StandardScaler,isoliert,14,1.3849,0.3228,1.3852,0.0976,-0.0,-0.0,0.0,-
 Feature Selection: Varianzfilter,Feature Selection,6,1.2011,0.527,1.054,0.4216,-0.3312,-23.9079,0.324,nein
 Feature Selection: Top 5 Korrelation,Feature Selection,5,1.0373,0.6216,1.3355,0.2118,-0.0497,-3.5866,0.1142,nein
 Feature Selection: Top 10 Korrelation,Feature Selection,10,0.9996,0.6563,1.1571,0.3803,-0.2281,-16.4696,0.2827,nein
