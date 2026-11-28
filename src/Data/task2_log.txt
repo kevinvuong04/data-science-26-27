@@ -13,9 +13,6 @@ Ausreißer Mittelwert | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 
 Ausreißer Median | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Median ersetzt; keine Transformation | 14 | 1.0061 | 1.2875 | 0.5531 | 0.1716 | -0.0977
 Ausreißer Median | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Median ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.9663 | 1.2563 | 0.5891 | 0.3106 | -0.1290
 Ausreißer Median | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Median ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.9364 | 1.4144 | 0.6155 | 0.1573 | +0.0292
-Ausreißer Nachbarstunden | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; keine Transformation | 14 | 0.8763 | 1.2320 | 0.6714 | 0.1554 | -0.1532
-Ausreißer Nachbarstunden | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; log(1+x) auf ['no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8432 | 1.2368 | 0.6865 | 0.2186 | -0.1485
-Ausreißer Nachbarstunden | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; PowerTransformer auf ['no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8114 | 1.4067 | 0.7136 | 0.0674 | +0.0214
 Ausreißer IQR-Grenze | keine Transformation | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch IQR-Grenze ersetzt; keine Transformation | 14 | 0.8406 | 1.1568 | 0.7191 | 0.2403 | -0.2284
 Ausreißer IQR-Grenze | log(1+x) | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch IQR-Grenze ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8462 | 1.1985 | 0.7285 | 0.3138 | -0.1867
 Ausreißer IQR-Grenze | PowerTransformer | co2/o3 behalten | kumulativ | co2/o3 behalten; Ausreißer ['pm25_lowcost'] durch IQR-Grenze ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'co2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 14 | 0.8331 | 1.3481 | 0.7358 | 0.1890 | -0.0372
@@ -34,9 +31,6 @@ Ausreißer Mittelwert | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 
 Ausreißer Median | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Median ersetzt; keine Transformation | 12 | 1.0617 | 1.2097 | 0.5279 | 0.2214 | -0.1755
 Ausreißer Median | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Median ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 1.0086 | 1.1101 | 0.5711 | 0.4493 | -0.2751
 Ausreißer Median | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Median ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.9675 | 1.3491 | 0.6044 | 0.2610 | -0.0361
-Ausreißer Nachbarstunden | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; keine Transformation | 12 | 0.9393 | 1.0717 | 0.6459 | 0.2853 | -0.3135
-Ausreißer Nachbarstunden | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; log(1+x) auf ['no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8768 | 1.0698 | 0.6722 | 0.3767 | -0.3154
-Ausreißer Nachbarstunden | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch Nachbarstunden ersetzt; PowerTransformer auf ['no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8374 | 1.3041 | 0.7043 | 0.2064 | -0.0811
 Ausreißer IQR-Grenze | keine Transformation | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch IQR-Grenze ersetzt; keine Transformation | 12 | 0.9087 | 0.9163 | 0.6909 | 0.4873 | -0.4689
 Ausreißer IQR-Grenze | log(1+x) | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch IQR-Grenze ersetzt; log(1+x) auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8895 | 0.8464 | 0.7082 | 0.6260 | -0.5388
 Ausreißer IQR-Grenze | PowerTransformer | co2/o3 entfernt | kumulativ | co2/o3 entfernt; Ausreißer ['pm25_lowcost'] durch IQR-Grenze ersetzt; PowerTransformer auf ['pm25_lowcost', 'no', 'no2', 'black_carbon', 'ufp', 'wind_speed', 'glob_rad', 'rain_per_hour'] | 12 | 0.8688 | 1.1497 | 0.7216 | 0.4070 | -0.2355
@@ -52,34 +46,62 @@ Ausreißer 5./95. Perzentil (alle Schadstoffe) | PowerTransformer | co2/o3 entfe
 Ausreißer IQR-Grenze | isoliert | nur diese Ausreißerbehandlung | 14 | 0.8406 | 1.1568 | 0.7191 | 0.2403 | -0.2284
 log(1+x) | isoliert | nur diese Transformation | 14 | 0.8496 | 1.1988 | 0.6628 | -0.2173 | -0.1864
 co2/o3 entfernt | isoliert | nur Feature Deletion co2 und o3 | 12 | 1.4260 | 1.2507 | 0.2777 | 0.2584 | -0.1345
-ENTSCHEIDUNG Ausreißer IQR-Grenze | log(1+x) | co2/o3 entfernt: ja (niedrigster MAE der Validierung von 42 Kombinationen)
-ENTSCHEIDUNG übrige 41 Kombinationen: nein (höherer MAE der Validierung)
-Imputation nur Median | kumulativ | alle Lücken mit Trainings-Median | 12 | 0.8895 | 0.8464 | 0.7082 | 0.6260 | -0.5388
-Imputation Nachbarstunden + Median | kumulativ | kurze Lücken Nachbarstunden, Rest Median | 12 | 0.8843 | 0.8503 | 0.7109 | 0.6233 | -0.5350
-Imputation je Feature | kumulativ | Nachbarstunden, Regression für ['no', 'no2', 'black_carbon', 'ufp'], Rest Median | 12 | 0.8816 | 0.8560 | 0.7125 | 0.6148 | -0.5292
-Imputation nur Median | isoliert | nur diese Imputation | 14 | 1.3849 | 1.3852 | 0.3228 | 0.0976 | +0.0000
-ENTSCHEIDUNG Imputation nur Median: ja (niedrigster MAE der Validierung)
-ENTSCHEIDUNG Imputation Nachbarstunden + Median: nein (höherer MAE als Imputation nur Median)
-ENTSCHEIDUNG Imputation je Feature: nein (höherer MAE als Imputation nur Median)
-Windrichtung sin/cos | kumulativ | wind_direction durch wind_sin und wind_cos ersetzt | 13 | 0.8891 | 0.8297 | 0.7117 | 0.6435 | -0.5555
+ENTSCHEIDUNG Ausreißer IQR-Grenze | log(1+x) | co2/o3 entfernt: ja (niedrigster MAE der Validierung von 36 Kombinationen)
+ENTSCHEIDUNG übrige 35 Kombinationen: nein (höherer MAE der Validierung)
+Listwise Deletion | kumulativ | Trainingszeilen mit mehr als 2 fehlenden Werten gelöscht | 12 | 0.8776 | 0.9895 | 0.7394 | 0.4988 | -0.3957
+Listwise Deletion | isoliert | Trainingszeilen mit mehr als 2 fehlenden Werten gelöscht | 14 | 1.4366 | 1.5119 | 0.3575 | -0.0541 | +0.1267
+ENTSCHEIDUNG Listwise Deletion: nein (MAE steigt)
+Imputation pm25_lowcost: Median | je Feature | pm25_lowcost mit Median, übrige Lücken Median | 12 | 0.8895 | 0.8464 | 0.7082 | 0.6260 | -0.5388
+Imputation pm25_lowcost: Mittelwert | je Feature | pm25_lowcost mit Mittelwert, übrige Lücken Median | 12 | 0.8956 | 0.8381 | 0.7043 | 0.6330 | -0.5472
+Imputation no: Median | je Feature | no mit Median, übrige Lücken Median | 12 | 0.8895 | 0.8464 | 0.7082 | 0.6260 | -0.5388
+Imputation no: Mittelwert | je Feature | no mit Mittelwert, übrige Lücken Median | 12 | 0.8895 | 0.8459 | 0.7081 | 0.6261 | -0.5393
+Imputation no: Regression | je Feature | no mit Regression, übrige Lücken Median | 12 | 0.8896 | 0.8436 | 0.7083 | 0.6272 | -0.5416
+Imputation no: KNN | je Feature | no mit KNN, übrige Lücken Median | 12 | 0.8896 | 0.8432 | 0.7082 | 0.6274 | -0.5420
+Imputation no2: Median | je Feature | no2 mit Median, übrige Lücken Median | 12 | 0.8895 | 0.8464 | 0.7082 | 0.6260 | -0.5388
+Imputation no2: Mittelwert | je Feature | no2 mit Mittelwert, übrige Lücken Median | 12 | 0.8895 | 0.8466 | 0.7082 | 0.6259 | -0.5386
+Imputation no2: Regression | je Feature | no2 mit Regression, übrige Lücken Median | 12 | 0.8897 | 0.8454 | 0.7083 | 0.6264 | -0.5398
+Imputation no2: KNN | je Feature | no2 mit KNN, übrige Lücken Median | 12 | 0.8898 | 0.8448 | 0.7083 | 0.6266 | -0.5404
+Imputation ufp: Median | je Feature | ufp mit Median, übrige Lücken Median | 12 | 0.8895 | 0.8464 | 0.7082 | 0.6260 | -0.5388
+Imputation ufp: Mittelwert | je Feature | ufp mit Mittelwert, übrige Lücken Median | 12 | 0.8895 | 0.8465 | 0.7082 | 0.6260 | -0.5387
+Imputation ufp: Regression | je Feature | ufp mit Regression, übrige Lücken Median | 12 | 0.8841 | 0.8753 | 0.7127 | 0.5981 | -0.5099
+Imputation ufp: KNN | je Feature | ufp mit KNN, übrige Lücken Median | 12 | 0.8839 | 0.8771 | 0.7132 | 0.5969 | -0.5081
+Imputation temperature: Median | je Feature | temperature mit Median, übrige Lücken Median | 12 | 0.8895 | 0.8464 | 0.7082 | 0.6260 | -0.5388
+Imputation temperature: Mittelwert | je Feature | temperature mit Mittelwert, übrige Lücken Median | 12 | 0.8897 | 0.8459 | 0.7081 | 0.6263 | -0.5393
+Imputation relative_humidity: Median | je Feature | relative_humidity mit Median, übrige Lücken Median | 12 | 0.8895 | 0.8464 | 0.7082 | 0.6260 | -0.5388
+Imputation relative_humidity: Mittelwert | je Feature | relative_humidity mit Mittelwert, übrige Lücken Median | 12 | 0.8894 | 0.8473 | 0.7083 | 0.6254 | -0.5379
+Imputation pressure: Median | je Feature | pressure mit Median, übrige Lücken Median | 12 | 0.8895 | 0.8464 | 0.7082 | 0.6260 | -0.5388
+Imputation pressure: Mittelwert | je Feature | pressure mit Mittelwert, übrige Lücken Median | 12 | 0.8895 | 0.8460 | 0.7081 | 0.6262 | -0.5392
+Imputation wind_speed: Median | je Feature | wind_speed mit Median, übrige Lücken Median | 12 | 0.8895 | 0.8464 | 0.7082 | 0.6260 | -0.5388
+Imputation wind_speed: Mittelwert | je Feature | wind_speed mit Mittelwert, übrige Lücken Median | 12 | 0.8895 | 0.8465 | 0.7082 | 0.6260 | -0.5387
+Imputation wind_direction: Median | je Feature | wind_direction mit Median, übrige Lücken Median | 12 | 0.8895 | 0.8464 | 0.7082 | 0.6260 | -0.5388
+Imputation wind_direction: Mittelwert | je Feature | wind_direction mit Mittelwert, übrige Lücken Median | 12 | 0.8913 | 0.8415 | 0.7070 | 0.6302 | -0.5438
+Imputation glob_rad: Median | je Feature | glob_rad mit Median, übrige Lücken Median | 12 | 0.8895 | 0.8464 | 0.7082 | 0.6260 | -0.5388
+Imputation glob_rad: Mittelwert | je Feature | glob_rad mit Mittelwert, übrige Lücken Median | 12 | 0.8890 | 0.8500 | 0.7084 | 0.6235 | -0.5352
+Imputation rain_per_hour: Median | je Feature | rain_per_hour mit Median, übrige Lücken Median | 12 | 0.8895 | 0.8464 | 0.7082 | 0.6260 | -0.5388
+Imputation rain_per_hour: Mittelwert | je Feature | rain_per_hour mit Mittelwert, übrige Lücken Median | 12 | 0.8892 | 0.8478 | 0.7083 | 0.6251 | -0.5374
+Imputation je Feature | kumulativ | pm25_lowcost: Mittelwert; no: KNN; no2: KNN; ufp: Median; temperature: Mittelwert; relative_humidity: Median; pressure: Mittelwert; wind_speed: Median; wind_direction: Mittelwert; glob_rad: Median; rain_per_hour: Median | 12 | 0.8980 | 0.8300 | 0.7027 | 0.6391 | -0.5552
+Imputation je Feature | isoliert | pm25_lowcost: Mittelwert; no: KNN; no2: KNN; ufp: Median; temperature: Mittelwert; relative_humidity: Median; pressure: Mittelwert; wind_speed: Median; wind_direction: Mittelwert; glob_rad: Median; rain_per_hour: Median | 14 | 1.3969 | 1.3714 | 0.3136 | 0.1105 | -0.0139
+ENTSCHEIDUNG Imputation je Feature: ja (MAE sinkt gegenüber dem Median für alle Features)
+Windrichtung sin/cos | kumulativ | wind_direction durch wind_sin und wind_cos ersetzt | 13 | 0.9016 | 0.8076 | 0.7057 | 0.6616 | -0.5776
 Windrichtung sin/cos | isoliert | wind_direction durch wind_sin und wind_cos ersetzt | 15 | 1.3798 | 1.3153 | 0.3315 | 0.1722 | -0.0699
 ENTSCHEIDUNG Windrichtung sin/cos: ja (MAE sinkt)
-Interaktion Lowcost x Feuchte | kumulativ | neues Feature lowcost_x_humidity | 14 | 0.8909 | 0.7644 | 0.7169 | 0.7064 | -0.6208
+Interaktion Lowcost x Feuchte | kumulativ | neues Feature lowcost_x_humidity | 14 | 0.9030 | 0.7601 | 0.7083 | 0.7071 | -0.6251
 Interaktion Lowcost x Feuchte | isoliert | neues Feature lowcost_x_humidity | 15 | 1.1843 | 1.2664 | 0.4754 | 0.2842 | -0.1188
 ENTSCHEIDUNG Interaktion Lowcost x Feuchte: ja (MAE sinkt)
-StandardScaler | kumulativ | StandardScaler auf allen Features | 14 | 0.8909 | 0.7644 | 0.7169 | 0.7064 | -0.6208
+StandardScaler | kumulativ | StandardScaler auf allen Features | 14 | 0.9030 | 0.7601 | 0.7083 | 0.7071 | -0.6251
 StandardScaler | isoliert | StandardScaler auf allen Features | 14 | 1.3849 | 1.3852 | 0.3228 | 0.0976 | -0.0000
 ENTSCHEIDUNG StandardScaler: ja (MAE unverändert, Koeffizienten vergleichbar, wichtig für Aufgabe 3)
-ohne glob_rad | kumulativ | glob_rad entfernt | 13 | 0.9084 | 0.8159 | 0.7081 | 0.6694 | -0.5693
-ohne glob_rad | isoliert | nur glob_rad entfernt | 13 | 1.3963 | 1.2368 | 0.3095 | 0.2482 | -0.1484
-ENTSCHEIDUNG ohne glob_rad: nein (MAE steigt)
-ohne rain_per_hour | kumulativ | rain_per_hour entfernt | 13 | 0.9028 | 0.7674 | 0.7131 | 0.7047 | -0.6179
-ohne rain_per_hour | isoliert | nur rain_per_hour entfernt | 13 | 1.3851 | 1.2215 | 0.3171 | 0.2650 | -0.1637
-ENTSCHEIDUNG ohne rain_per_hour: nein (MAE steigt)
-ohne lowcost_x_humidity | kumulativ | lowcost_x_humidity entfernt | 13 | 0.8891 | 0.8297 | 0.7117 | 0.6435 | -0.5555
-ENTSCHEIDUNG ohne lowcost_x_humidity: nein (MAE steigt)
-ohne no2 | kumulativ | no2 entfernt | 13 | 0.9000 | 0.7489 | 0.7138 | 0.7168 | -0.6363
-ohne no2 | isoliert | nur no2 entfernt | 13 | 1.3888 | 1.1645 | 0.3002 | 0.3295 | -0.2207
-ENTSCHEIDUNG ohne no2: ja (MAE sinkt)
+Feature Selection: Varianzfilter | Feature Selection | entfernt: no, no2, black_carbon, ufp, temperature, pressure, wind_speed, rain_per_hour | 6 | 1.2011 | 1.0540 | 0.5270 | 0.4216 | -0.3312
+Feature Selection: Top 5 Korrelation | Feature Selection | entfernt: no, ufp, temperature, relative_humidity, pressure, wind_speed, glob_rad, rain_per_hour, wind_sin | 5 | 1.0373 | 1.3355 | 0.6216 | 0.2118 | -0.0497
+Feature Selection: Top 10 Korrelation | Feature Selection | entfernt: temperature, relative_humidity, glob_rad, rain_per_hour | 10 | 0.9996 | 1.1571 | 0.6563 | 0.3803 | -0.2281
+Feature Selection: VIF < 10 | Feature Selection | entfernt: relative_humidity, lowcost_x_humidity | 12 | 0.9024 | 0.8134 | 0.7035 | 0.6582 | -0.5718
+Feature Selection: Backward Elimination | Feature Selection | entfernt: nichts | 14 | 0.9030 | 0.7601 | 0.7083 | 0.7071 | -0.6251
+Feature Selection: Forward Selection | Feature Selection | entfernt: no, no2, black_carbon, pressure, wind_speed, wind_sin, wind_cos | 7 | 1.0592 | 0.8547 | 0.6103 | 0.6561 | -0.5305
+ENTSCHEIDUNG Feature Selection: Varianzfilter: nein (höherer MAE der Validierung)
+ENTSCHEIDUNG Feature Selection: Top 5 Korrelation: nein (höherer MAE der Validierung)
+ENTSCHEIDUNG Feature Selection: Top 10 Korrelation: nein (höherer MAE der Validierung)
+ENTSCHEIDUNG Feature Selection: VIF < 10: nein (höherer MAE der Validierung)
+ENTSCHEIDUNG Feature Selection: Forward Selection: nein (höherer MAE der Validierung)
+ENTSCHEIDUNG Feature Selection: Backward Elimination: nein (kein Verfahren senkt den MAE)
 TEST Baseline | 1464 Zeilen, 1419 bewertet | MAE Test 2.2015 | R2 Test -0.1199
-TEST Finales Modell | 1464 Zeilen, 1419 bewertet | MAE Test 1.5336 | R2 Test 0.4931
+TEST Finales Modell | 1464 Zeilen, 1419 bewertet | MAE Test 1.5520 | R2 Test 0.4867
